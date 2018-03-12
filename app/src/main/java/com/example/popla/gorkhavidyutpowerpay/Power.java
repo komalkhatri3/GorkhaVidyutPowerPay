@@ -11,5 +11,8 @@ public class Power extends AppCompatActivity {
         setContentView(R.layout.activity_power);
         int c;
         String koml;
+
     }
+
 }
+
