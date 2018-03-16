@@ -18,8 +18,8 @@ public class Login extends AppCompatActivity {
         intent =new Intent(this,Power.class);
         startActivity(intent);
     }
-    public void SignUp(View view)
+    public void sign(View view)
     {
-        intent=new Intent(this,Power.class);
+        intent = new Intent(this,SignUp.class);
     }
 }

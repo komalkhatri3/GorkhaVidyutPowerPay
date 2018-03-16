@@ -3,16 +3,11 @@ package com.example.popla.gorkhavidyutpowerpay;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class  Power extends AppCompatActivity {
+public class SignUp extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_power);
-        int c;
-        String koml;
-
+        setContentView(R.layout.activity_sign_up);
     }
-
 }
-
