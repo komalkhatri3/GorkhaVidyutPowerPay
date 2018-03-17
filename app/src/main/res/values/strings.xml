@@ -1,6 +1,13 @@
 <resources>
     <string name="app_name">GorkhaVidyutPowerPay</string>
     <string name="title_activity_sign_up">SignUp</string>
+    <string-array name="designation">
+        <item> </item>
+        <item>Verifier</item>
+        <item>Approver</item>
+        <item>Applier</item>
+        <item>Reader</item>
+    </string-array>
     <string name="large_text">
         "Material is the metaphor.\n\n"
 

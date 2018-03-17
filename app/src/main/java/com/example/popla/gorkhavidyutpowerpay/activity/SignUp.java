@@ -1,7 +1,9 @@
-package com.example.popla.gorkhavidyutpowerpay;
+package com.example.popla.gorkhavidyutpowerpay.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.example.popla.gorkhavidyutpowerpay.R;
 
 public class SignUp extends AppCompatActivity {
 
