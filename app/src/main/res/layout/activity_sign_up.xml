@@ -25,12 +25,12 @@
             android:hint="Enter email"
             android:inputType="textEmailAddress"
             android:id="@+id/edit2"
-            android:paddingTop="20dp"
+            android:paddingTop="30dp"
             android:layout_below="@+id/edit1"
             />
         <EditText
             android:layout_width="match_parent"
-            android:paddingTop="20dp"
+            android:paddingTop="30dp"
             android:layout_height="wrap_content"
             android:hint="Enter Mobile No."
             android:inputType="phone"
@@ -40,7 +40,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="20dp"
+            android:paddingTop="30dp"
             android:hint="Enter Aadhar Number"
             android:inputType="number"
             android:id="@+id/edit4"
@@ -48,7 +48,7 @@
             />
         <EditText
             android:layout_width="match_parent"
-            android:paddingTop="20dp"
+            android:paddingTop="30dp"
             android:layout_height="wrap_content"
             android:hint="Enter Password"
             android:id="@+id/edit5"
@@ -57,28 +57,31 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="20dp"
+            android:paddingTop="30dp"
             android:hint="ReEnter Password"
             android:id="@+id/edit6"
             android:layout_below="@+id/edit5"
             />
-        <Button
-            android:layout_width="wrap_content"
+        <EditText
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Sign Up"
-            android:id="@+id/signup"
+            android:paddingTop="30dp"
+            android:hint="Enter K Number"
+            android:id="@+id/edit7"
             android:layout_below="@+id/edit6"
-            android:paddingTop="25dp"
-
             />
 
         <Button
-            android:id="@+id/login"
-            android:layout_width="wrap_content"
+            android:id="@+id/signup"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentEnd="true"
-            android:paddingTop="25dp"
-            android:text="Login" />
+            android:layout_below="@+id/edit7"
+            android:gravity="center"
+            android:paddingTop="30dp"
+            android:text="Sign Up"
+            />
+
+
+
     </RelativeLayout>
 </ScrollView>
