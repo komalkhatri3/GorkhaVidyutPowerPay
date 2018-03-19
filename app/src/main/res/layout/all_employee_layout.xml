@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="80dp">
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:id="@+id/emp_name"
+        android:text="Employee Name"
+        android:layout_alignParentStart="true"
+        android:gravity="center"
+        android:layout_marginStart="20dp"/>
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:id="@+id/emp_desig"
+        android:text="Employee Designation"
+        android:layout_toRightOf="@+id/emp_name"
+        android:gravity="center"
+        android:layout_marginLeft="40dp"/>
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:id="@+id/emp_view"
+        android:text="Detail"
+        android:gravity="center"
+        android:layout_toRightOf="@+id/emp_desig"
+        android:layout_marginLeft="40dp"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_below="@+id/emp_name"
+        android:layout_marginTop="3dp"></View>
+
+</RelativeLayout>

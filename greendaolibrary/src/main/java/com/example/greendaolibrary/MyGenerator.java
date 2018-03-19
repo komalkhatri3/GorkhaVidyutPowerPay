@@ -21,19 +21,46 @@ public class MyGenerator {
     private static void addTables(final Schema schema) {
         addUserEntities(schema);
        // addPhonesEntities(schema);
+        addEmployeeEntities(schema);
+        addRegisterEntities(schema);
+
     }
 
     // This is use to describe the colums of your table
     private static Entity addUserEntities(final Schema schema) {
         Entity user = schema.addEntity("User");
-        user.addIdProperty().primaryKey().autoincrement();
-        user.addIntProperty("user_id").notNull();
-        user.addStringProperty("last_name");
-        user.addStringProperty("first_name");
-        user.addStringProperty("email");
+        user.addLongProperty("user_id").primaryKey().autoincrement();
+        user.addStringProperty("user_name");
+        user.addStringProperty("user_email");
+        user.addIntProperty("user_mobile");
+        user.addLongProperty("user_aadhar");
+        user.addStringProperty("user_password");
+        user.addStringProperty("user_kno");
         return user;
     }
-    
+    private static Entity addEmployeeEntities(final Schema schema)
+    {
+        Entity employee = schema.addEntity("Employee");
+
+        employee.addLongProperty("emp_id").primaryKey().autoincrement();
+        employee.addStringProperty("emp_name");
+        employee.addStringProperty("emp_email_id");
+        employee.addStringProperty("emp_mobile");
+        employee.addStringProperty("emp_age");
+        employee.addStringProperty("emp_designation");
+        return employee;
+    }
+    private static Entity addRegisterEntities(final Schema schema) {
+        Entity register = schema.addEntity("Register");
+        register.addLongProperty("user_id").primaryKey().autoincrement();
+        register.addStringProperty("user_name");
+        register.addStringProperty("user_email");
+        register.addStringProperty("user_mobile");
+        register.addStringProperty("user_aadhar");
+        register.addStringProperty("user_password");
+        register.addStringProperty("user_kno");
+        return register;
+    }
  //    private static Entity addPhonesEntities(final Schema schema) {
  //        Entity phone = schema.addEntity("Phone");
  //        phone.addIdProperty().primaryKey().autoincrement();
