@@ -55,15 +55,15 @@ public class Login extends AppCompatActivity {
     Intent intent;
     public void LogIn(View view)
     {
-        if ((emailid.getText().toString().equals("1234"))&&(pass.getText().toString().equals("1234")))
-        {
+        //if ((emailid.getText().toString().equals("1234"))&&(pass.getText().toString().equals("1234")))
+        //{
             intent =new Intent(this, EmployeRegistration.class  );
             startActivity(intent);
-        }
-        else
-        {
-            Toast.makeText(this,"Not Work",Toast.LENGTH_LONG).show();
-        }
+        //}
+        //else
+        //{
+          //  Toast.makeText(this,"Not Work",Toast.LENGTH_LONG).show();
+        //}
     }
     public void sign(View view)
     {

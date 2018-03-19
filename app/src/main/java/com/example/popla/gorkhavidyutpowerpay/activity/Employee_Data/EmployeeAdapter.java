@@ -24,7 +24,7 @@ public class EmployeeAdapter extends ArrayAdapter{
     static class DataHandler
     {
         TextView name;
-        TextView designation;
+        TextView designations;
 
     }
     @Override
@@ -54,7 +54,7 @@ public class EmployeeAdapter extends ArrayAdapter{
             row = inflater.inflate(R.layout.all_employee_layout, parent, false);
             handler = new DataHandler();
             handler.name = (TextView) row.findViewById(R.id.emp_name);
-            handler.designation = (TextView) row.findViewById(R.id.emp_desig);
+            handler.designations = (TextView) row.findViewById(R.id.emp_desig);
             row.setTag(handler);
         }
         else
@@ -63,7 +63,7 @@ public class EmployeeAdapter extends ArrayAdapter{
         }
         EmployeeDataProvider dataProvider = (EmployeeDataProvider) this.getItem(position);
         handler.name.setText(dataProvider.getEmp_name());
-        handler.designation.setText(dataProvider.getEmp_designation());
+        handler.designations.setText(dataProvider.getEmp_designation());
         return row;
     }
 }

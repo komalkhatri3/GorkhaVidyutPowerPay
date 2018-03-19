@@ -8,6 +8,7 @@
         android:layout_height="75dp"
         android:id="@+id/emp_name"
         android:text="Employee Name"
+        android:textColor="#000000"
         android:layout_alignParentStart="true"
         android:gravity="center"
         android:layout_marginStart="20dp"/>
@@ -15,6 +16,7 @@
         android:layout_width="100dp"
         android:layout_height="75dp"
         android:id="@+id/emp_desig"
+        android:textColor="#000000"
         android:text="Employee Designation"
         android:layout_toRightOf="@+id/emp_name"
         android:gravity="center"
