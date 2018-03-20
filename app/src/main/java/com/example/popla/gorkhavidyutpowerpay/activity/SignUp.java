@@ -42,8 +42,8 @@ public class SignUp extends AppCompatActivity {
 
         register.setUser_name(uname.getText().toString());
         register.setUser_email(uemail.getText().toString());
-        register.setUser_mobile(Integer.parseInt(umobile.getText().toString()));
-        register.setUser_aadhar(Long.parseLong(uaadhar.getText().toString()));
+        register.setUser_mobile(umobile.getText().toString());
+        register.setUser_aadhar(uaadhar.getText().toString());
         register.setUser_password(upassword.getText().toString());
         register.setUser_kno(ukno.getText().toString());
         daoSession.getRegisterDao().insert(register);

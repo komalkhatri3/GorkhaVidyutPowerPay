@@ -23,6 +23,7 @@ public class MyGenerator {
        // addPhonesEntities(schema);
         addEmployeeEntities(schema);
         addRegisterEntities(schema);
+        addNewConnectionEntities(schema);
 
     }
 
@@ -60,6 +61,27 @@ public class MyGenerator {
         register.addStringProperty("user_password");
         register.addStringProperty("user_kno");
         return register;
+    }
+    private static Entity addNewConnectionEntities(final Schema schema)
+    {
+        Entity new_connection=schema.addEntity("New_Connection");
+        new_connection.addLongProperty("application_id").primaryKey().autoincrement();
+        new_connection.addStringProperty("applicant_name");
+        new_connection.addStringProperty("applicant_fname");
+        new_connection.addStringProperty("applicant_DOB");
+        new_connection.addStringProperty("applicant_occupaion");
+        new_connection.addStringProperty("applicant_area");
+        new_connection.addStringProperty("applicant_landmark");
+        new_connection.addStringProperty("applicant_city");
+        new_connection.addStringProperty("applicant_pincode");
+        new_connection.addStringProperty("applicant_contype");
+        new_connection.addFloatProperty("applicant_Psize");
+        new_connection.addFloatProperty("applicant_covereda");
+        new_connection.addFloatProperty("applicant_reqKV");
+        new_connection.addStringProperty("applicant_pos");
+        new_connection.addStringProperty("applicant_aadhar");
+        new_connection.addDateProperty("submit_date");
+        return new_connection;
     }
  //    private static Entity addPhonesEntities(final Schema schema) {
  //        Entity phone = schema.addEntity("Phone");

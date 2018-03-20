@@ -12,6 +12,7 @@ import android.widget.Toast;
 import com.example.popla.gorkhavidyutpowerpay.AppController;
 import com.example.popla.gorkhavidyutpowerpay.Power;
 import com.example.popla.gorkhavidyutpowerpay.R;
+import com.example.popla.gorkhavidyutpowerpay.activity.Verifier.VerifierNewConnection;
 import com.example.popla.gorkhavidyutpowerpay.db.DaoSession;
 import com.example.popla.gorkhavidyutpowerpay.db.Employee;
 import com.example.popla.gorkhavidyutpowerpay.db.User;
@@ -68,6 +69,11 @@ public class Login extends AppCompatActivity {
     public void sign(View view)
     {
         intent = new Intent(this,SignUp.class);
+        startActivity(intent);
+    }
+    public void sign1(View view)
+    {
+        intent = new Intent(this,VerifierNewConnection.class);
         startActivity(intent);
     }
 }
