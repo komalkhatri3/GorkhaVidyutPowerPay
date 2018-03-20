@@ -11,11 +11,20 @@ import java.util.List;
 public class EmployeeDataProvider {
     private String emp_name;
     private String emp_designation;
+    private String emp_email;
 
-    public EmployeeDataProvider(String emp_name, String emp_designation)
+    public String getEmp_email()
+    {
+        return emp_email;
+    }
+    public void setEmp_email(String emp_email){
+        this.emp_email= emp_email;
+    }
+    public EmployeeDataProvider(String emp_name, String emp_designation, String emp_email)
     {
         this.setEmp_designation(emp_designation);
         this.setEmp_name(emp_name);
+        this.setEmp_email(emp_email);
     }
     public String getEmp_name() {
         return emp_name;
