@@ -39,7 +39,7 @@ public class Login extends AppCompatActivity {
         DaoSession daoSession = ((AppController) getApplication()).getDaoSession();
         List<User> list = daoSession.getUserDao().loadAll();
         Log.i("RESULT", list.get(0).getEmail());
-        Toast.makeText(this,  list.get(0).getEmail().toString(), Toast.LENGTH_LONG).show();
+        Toast.makeText(this,  list.get(0).getEmail().toString(),Toast.LENGTH_LONG).show();
     }
 
     private void insertDataIntoDb() {

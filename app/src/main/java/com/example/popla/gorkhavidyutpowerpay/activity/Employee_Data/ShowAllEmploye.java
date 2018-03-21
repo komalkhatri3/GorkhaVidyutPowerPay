@@ -2,6 +2,7 @@ package com.example.popla.gorkhavidyutpowerpay.activity.Employee_Data;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -20,6 +21,7 @@ public class ShowAllEmploye extends AppCompatActivity {
     ListView listView;
     List<String> ename;
     List<String> edesig;
+    List<String> eid;
     String a;
     EmployeeAdapter adapter;
 
@@ -30,15 +32,16 @@ public class ShowAllEmploye extends AppCompatActivity {
         listView = (ListView) findViewById(R.id.list_view);
         ename = new ArrayList<String>();
         edesig = new ArrayList<String>();
+        eid = new ArrayList<String>();
         get_name_desig();
        // int i=0;
-        adapter = new EmployeeAdapter(getApplicationContext(),R.layout.all_employee_layout);
+        adapter = new EmployeeAdapter(getApplicationContext(),R.layout.activity_all_employee_layouts);
         listView.setAdapter(adapter);
      //  for(String names : ename)
      //   {
             for(int i=0;i<ename.size();i++)
             {
-                EmployeeDataProvider dataProvider = new EmployeeDataProvider(ename.get(i), edesig.get(i));
+                EmployeeDataProvider dataProvider = new EmployeeDataProvider(ename.get(i), edesig.get(i),eid.get(i));
                 adapter.add(dataProvider);
                // i++;
             }
@@ -55,7 +58,7 @@ public class ShowAllEmploye extends AppCompatActivity {
 
 
           ename.add(list.get(i).getEmp_name());
-
+            eid.add(list.get(i).getEmp_email_id());
           edesig.add(list.get(i).getEmp_designation());
 
         }
@@ -67,4 +70,7 @@ public class ShowAllEmploye extends AppCompatActivity {
       // Toast.makeText(this,ename.get(0),Toast.LENGTH_LONG).show();
 
     }
+
+
+
 }
