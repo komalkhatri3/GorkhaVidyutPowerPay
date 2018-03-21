@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.popla.gorkhavidyutpowerpay.SignUp">
+    tools:context="com.example.popla.gorkhavidyutpowerpay.activity.SignUp">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -13,11 +13,21 @@
         android:paddingRight="16dp"
         android:paddingTop="30dp">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign Up"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/sign_up"/>
         <EditText
             android:layout_width="match_parent"
+            android:layout_marginTop="30dp"
             android:layout_height="wrap_content"
             android:hint="Enter Name"
             android:id="@+id/edit1"
+            android:layout_below="@+id/sign_up"
+
             />
         <EditText
             android:layout_width="match_parent"
@@ -77,10 +87,22 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/edit7"
             android:gravity="center"
-            android:paddingTop="30dp"
+            android:paddingTop="20dp"
+            android:layout_marginTop="20dp"
+            android:paddingBottom="20dp"
             android:text="Sign Up"
+            android:onClick="signup"
             />
-
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/signup"
+            android:gravity="center"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:text="show Data"
+            android:onClick="show"/>
 
 
     </RelativeLayout>
