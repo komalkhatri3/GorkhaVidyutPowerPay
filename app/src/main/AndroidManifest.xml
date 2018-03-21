@@ -11,22 +11,23 @@
         android:theme="@style/AppTheme">
         <activity android:name=".Power" />
         <activity android:name=".activity.Login">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter></activity>
-
+            </intent-filter>
+        </activity>
         <activity android:name=".activity.SignUp" />
         <activity android:name=".activity.EmployeRegistration" />
         <activity android:name=".activity.Employee_Data.ShowAllEmploye" />
-        <activity android:name=".activity.Verifier.VerifierNewConnection">
-           </activity>
-        <activity android:name=".activity.AddNewConnection">
-
-        </activity>
-
+        <activity android:name=".activity.Verifier.VerifierNewConnection" />
+        <activity android:name=".activity.AddNewConnection" />
+        <activity
+            android:name=".Homepage"
+            android:label="@string/title_activity_homepage"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".activity.PayBills" />
+        <activity android:name=".activity.PutBilldeatails"></activity>
     </application>
 
 </manifest>

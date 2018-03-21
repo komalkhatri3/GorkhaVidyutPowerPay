@@ -25,6 +25,9 @@ public class MyGenerator {
         addRegisterEntities(schema);
         addNewConnectionEntities(schema);
 
+        addBill_detailsEntities(schema);
+
+
     }
 
     // This is use to describe the colums of your table
@@ -82,6 +85,21 @@ public class MyGenerator {
         new_connection.addStringProperty("applicant_aadhar");
         new_connection.addDateProperty("submit_date");
         return new_connection;
+    }
+
+    private static Entity addBill_detailsEntities(final Schema schema)
+    {
+        Entity billdetails=schema.addEntity("Bill_details");
+        billdetails.addLongProperty("Bill_id").primaryKey().autoincrement();
+        billdetails.addStringProperty("k_no");
+        billdetails.addStringProperty("previous_read");
+        billdetails.addStringProperty("current_read");
+        billdetails.addDateProperty("generated_date");
+        billdetails.addStringProperty("paid_by");
+        billdetails.addStringProperty("receipt_no");
+        billdetails.addStringProperty("status");
+
+        return billdetails;
     }
  //    private static Entity addPhonesEntities(final Schema schema) {
  //        Entity phone = schema.addEntity("Phone");
