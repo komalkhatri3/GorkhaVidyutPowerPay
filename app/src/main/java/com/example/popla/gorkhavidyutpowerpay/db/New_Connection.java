@@ -29,7 +29,7 @@ public class New_Connection {
     private Float applicant_reqKV;
     private String applicant_pos;
     private String applicant_aadhar;
-    private java.util.Date submit_date;
+    private String submit_date;
 
     // KEEP FIELDS - put your custom fields here
     // KEEP FIELDS END
@@ -43,7 +43,7 @@ public class New_Connection {
     }
 
     @Generated
-    public New_Connection(Long application_id, String applicant_name, String applicant_fname, String applicant_DOB, String applicant_occupaion, String applicant_area, String applicant_landmark, String applicant_city, String applicant_pincode, String applicant_contype, Float applicant_Psize, Float applicant_covereda, Float applicant_reqKV, String applicant_pos, String applicant_aadhar, java.util.Date submit_date) {
+    public New_Connection(Long application_id, String applicant_name, String applicant_fname, String applicant_DOB, String applicant_occupaion, String applicant_area, String applicant_landmark, String applicant_city, String applicant_pincode, String applicant_contype, Float applicant_Psize, Float applicant_covereda, Float applicant_reqKV, String applicant_pos, String applicant_aadhar, String submit_date) {
         this.application_id = application_id;
         this.applicant_name = applicant_name;
         this.applicant_fname = applicant_fname;
@@ -182,11 +182,11 @@ public class New_Connection {
         this.applicant_aadhar = applicant_aadhar;
     }
 
-    public java.util.Date getSubmit_date() {
+    public String getSubmit_date() {
         return submit_date;
     }
 
-    public void setSubmit_date(java.util.Date submit_date) {
+    public void setSubmit_date(String submit_date) {
         this.submit_date = submit_date;
     }
 

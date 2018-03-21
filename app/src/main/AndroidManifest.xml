@@ -21,7 +21,10 @@
         <activity android:name=".activity.EmployeRegistration" />
         <activity android:name=".activity.Employee_Data.ShowAllEmploye" />
         <activity android:name=".activity.Employee_Data.ParticularEmployeeDetail" />
-        <activity android:name=".activity.Employee_Data.AllEmployeeLayouts"></activity>
+        <activity android:name=".activity.Employee_Data.AllEmployeeLayouts" />
+        <activity android:name=".activity.AddNewConnection" />
+        <activity android:name=".activity.Verifier.VerifierNewConnection" />
+        <activity android:name=".activity.Verifier.ParticulaApplicant"></activity>
     </application>
 
 </manifest>

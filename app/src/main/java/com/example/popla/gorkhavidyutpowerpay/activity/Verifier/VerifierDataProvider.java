@@ -5,6 +5,7 @@ package com.example.popla.gorkhavidyutpowerpay.activity.Verifier;
  */
 
 public class VerifierDataProvider {
+    private String App_id;
     private String App_Name;
     private String App_Area;
 
@@ -16,7 +17,8 @@ public class VerifierDataProvider {
         return App_Area;
     }
 
-    public VerifierDataProvider(String app_Name, String app_Area) {
+    public VerifierDataProvider(String app_id, String app_Name, String app_Area) {
+        App_id = app_id;
         App_Name = app_Name;
         App_Area = app_Area;
     }
@@ -27,5 +29,13 @@ public class VerifierDataProvider {
 
     public void setApp_Area(String app_Area) {
         App_Area = app_Area;
+    }
+    public String getApp_id()
+    {
+        return App_id;
+    }
+    public void setApp_id(String app_id)
+    {
+        App_id = app_id;
     }
 }
