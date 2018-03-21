@@ -83,7 +83,7 @@ public class MyGenerator {
         new_connection.addFloatProperty("applicant_reqKV");
         new_connection.addStringProperty("applicant_pos");
         new_connection.addStringProperty("applicant_aadhar");
-        new_connection.addDateProperty("submit_date");
+        new_connection.addStringProperty("submit_date");
         return new_connection;
     }
 

@@ -17,7 +17,8 @@ public class EmployeeDataProvider {
     {
         return emp_email;
     }
-    public void setEmp_email(String emp_email){
+
+    public void setEmp_email(String emp_email)  {
         this.emp_email= emp_email;
     }
     public EmployeeDataProvider(String emp_name, String emp_designation, String emp_email)

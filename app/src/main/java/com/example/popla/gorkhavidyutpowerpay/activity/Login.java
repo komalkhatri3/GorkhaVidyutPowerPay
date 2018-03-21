@@ -114,4 +114,9 @@ public class Login extends AppCompatActivity {
         intent = new Intent(this,VerifierNewConnection.class);
         startActivity(intent);
     }
+    public void Add(View v)
+    {
+        intent = new Intent(this,AddNewConnection.class);
+        startActivity(intent);
+    }
 }

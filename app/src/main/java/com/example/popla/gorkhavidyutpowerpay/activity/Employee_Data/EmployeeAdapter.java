@@ -65,13 +65,7 @@ public class EmployeeAdapter extends ArrayAdapter{
             handler.designations = (TextView) row.findViewById(R.id.emp_desig);
             handler.emailid = (TextView) row.findViewById(R.id.emp_id);
 
-
-
-
-
-
-
-
+            
             row.setTag(handler);
         }
         else

@@ -59,6 +59,12 @@
         android:layout_below="@id/password"
         android:layout_toLeftOf="@id/SignUp_Button"
         android:layout_alignBaseline="@id/SignUp_Button"/>
+   <Button
+       android:layout_width="100dp"
+       android:layout_height="50dp"
+       android:layout_below="@id/Login_button"
+       android:text="add"
+       android:onClick="Add"/>
     <Button
         android:id="@+id/Sig_Button"
         android:layout_width="100dp"
@@ -67,7 +73,7 @@
         android:layout_below="@id/SignUp_Button"
         android:layout_alignParentRight="true"
         android:layout_marginTop="20dp"
-        android:text="add"
+        android:text="show"
         android:onClick="sign1"
         />
 </RelativeLayout>

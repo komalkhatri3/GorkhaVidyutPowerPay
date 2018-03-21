@@ -85,7 +85,7 @@ public class AddNewConnection extends FragmentActivity {
     public void submitNewdetails(View view)
     {
 
-        Toast.makeText(this,"Employe Registered",Toast.LENGTH_LONG).show();
+
         DaoSession daoSession =((AppController)getApplication()).getDaoSession();
         New_Connection new_connection=new New_Connection();
         new_connection.setApplicant_name(name.getText().toString());
@@ -102,7 +102,7 @@ public class AddNewConnection extends FragmentActivity {
         new_connection.setApplicant_reqKV(Float.parseFloat(reqKV.getText().toString()));
         new_connection.setApplicant_pos(pos.getText().toString());
         new_connection.setApplicant_aadhar(addhar.getText().toString());
-
-
+        daoSession.getNew_ConnectionDao().insert(new_connection);
+        Toast.makeText(this,"Employe Registered",Toast.LENGTH_LONG).show();
     }
 }
