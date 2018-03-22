@@ -27,7 +27,13 @@
             android:label="@string/title_activity_homepage"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".activity.PayBill" />
-        <activity android:name=".activity.PutBillDetail"></activity>
+        <activity android:name=".activity.PutBillDetail" />
+        <activity android:name="com.narendra.myapplication.Bill_Details">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
