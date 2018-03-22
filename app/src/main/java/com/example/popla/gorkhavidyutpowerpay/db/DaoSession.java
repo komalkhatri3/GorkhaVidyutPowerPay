@@ -24,7 +24,7 @@ import com.example.popla.gorkhavidyutpowerpay.db.Bill_detailsDao;
 
 /**
  * {@inheritDoc}
- * 
+ *
  * @see org.greenrobot.greendao.AbstractDaoSession
  */
 public class DaoSession extends AbstractDaoSession {
@@ -72,7 +72,7 @@ public class DaoSession extends AbstractDaoSession {
         registerDao(New_Connection.class, new_ConnectionDao);
         registerDao(Bill_details.class, bill_detailsDao);
     }
-    
+
     public void clear() {
         userDaoConfig.clearIdentityScope();
         employeeDaoConfig.clearIdentityScope();

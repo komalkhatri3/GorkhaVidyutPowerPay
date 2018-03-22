@@ -70,6 +70,8 @@ public class MyGenerator {
         Entity new_connection=schema.addEntity("New_Connection");
         new_connection.addLongProperty("application_id").primaryKey().autoincrement();
         new_connection.addStringProperty("applicant_name");
+
+
         new_connection.addStringProperty("applicant_fname");
         new_connection.addStringProperty("applicant_DOB");
         new_connection.addStringProperty("applicant_occupaion");
@@ -84,6 +86,7 @@ public class MyGenerator {
         new_connection.addStringProperty("applicant_pos");
         new_connection.addStringProperty("applicant_aadhar");
         new_connection.addStringProperty("submit_date");
+        new_connection.addStringProperty("k_no");
         return new_connection;
     }
 

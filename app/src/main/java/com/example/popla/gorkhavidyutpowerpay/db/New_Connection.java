@@ -30,6 +30,7 @@ public class New_Connection {
     private String applicant_pos;
     private String applicant_aadhar;
     private String submit_date;
+    private String k_no;
 
     // KEEP FIELDS - put your custom fields here
     // KEEP FIELDS END
@@ -43,7 +44,7 @@ public class New_Connection {
     }
 
     @Generated
-    public New_Connection(Long application_id, String applicant_name, String applicant_fname, String applicant_DOB, String applicant_occupaion, String applicant_area, String applicant_landmark, String applicant_city, String applicant_pincode, String applicant_contype, Float applicant_Psize, Float applicant_covereda, Float applicant_reqKV, String applicant_pos, String applicant_aadhar, String submit_date) {
+    public New_Connection(Long application_id, String applicant_name, String applicant_fname, String applicant_DOB, String applicant_occupaion, String applicant_area, String applicant_landmark, String applicant_city, String applicant_pincode, String applicant_contype, Float applicant_Psize, Float applicant_covereda, Float applicant_reqKV, String applicant_pos, String applicant_aadhar, String submit_date, String k_no) {
         this.application_id = application_id;
         this.applicant_name = applicant_name;
         this.applicant_fname = applicant_fname;
@@ -60,6 +61,7 @@ public class New_Connection {
         this.applicant_pos = applicant_pos;
         this.applicant_aadhar = applicant_aadhar;
         this.submit_date = submit_date;
+        this.k_no = k_no;
     }
 
     public Long getApplication_id() {
@@ -188,6 +190,14 @@ public class New_Connection {
 
     public void setSubmit_date(String submit_date) {
         this.submit_date = submit_date;
+    }
+
+    public String getK_no() {
+        return k_no;
+    }
+
+    public void setK_no(String k_no) {
+        this.k_no = k_no;
     }
 
     // KEEP METHODS - put your custom methods here

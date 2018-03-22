@@ -170,10 +170,6 @@
             android:layout_alignParentRight="true"
             android:layout_below="@id/Adhar_add"
             android:onClick="submitNewdetails"/>
-
-
-
-
     </RelativeLayout>
 
 </ScrollView>
