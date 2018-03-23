@@ -11,7 +11,7 @@
     android:paddingLeft="18dp"
     android:paddingRight="18dp"
     android:paddingTop="130dp"
-    android:background="@drawable/leaf">
+    android:background="@drawable/ic_lock_white_24dp">
     tools:context="com.example.popla.gorkhavidyutpowerpay.activity.Login">
     <EditText
         android:layout_width="match_parent"

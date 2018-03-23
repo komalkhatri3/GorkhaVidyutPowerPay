@@ -22,12 +22,12 @@ public class Complaint_DetailsDao extends AbstractDao<Complaint_Details, Long> {
      * Can be used for QueryBuilder and for referencing column names.
      */
     public static class Properties {
-        public final static Property Complaint_No = new Property(0, Long.class, "Complaint_No", true, "COMPLAINT__NO");
-        public final static Property Comp_K_No = new Property(1, String.class, "Comp_K_No", false, "COMP__K__NO");
-        public final static Property Comp_Login_Id = new Property(2, String.class, "Comp_Login_Id", false, "COMP__LOGIN__ID");
-        public final static Property Comp_Date = new Property(3, String.class, "Comp_Date", false, "COMP__DATE");
-        public final static Property Comp_Msg = new Property(4, String.class, "Comp_Msg", false, "COMP__MSG");
-        public final static Property Comp_Status = new Property(5, String.class, "Comp_Status", false, "COMP__STATUS");
+        public final static Property Complaint_Id = new Property(0, Long.class, "Complaint_Id", true, "COMPLAINT__ID");
+        public final static Property K_No = new Property(1, String.class, "K_No", false, "K__NO");
+        public final static Property Login_by = new Property(2, String.class, "Login_by", false, "LOGIN_BY");
+        public final static Property Submit_Date = new Property(3, String.class, "Submit_Date", false, "SUBMIT__DATE");
+        public final static Property Comp_Msg = new Property(4, String.class, "comp_Msg", false, "COMP__MSG");
+        public final static Property Status = new Property(5, String.class, "Status", false, "STATUS");
     }
 
 
@@ -43,12 +43,12 @@ public class Complaint_DetailsDao extends AbstractDao<Complaint_Details, Long> {
     public static void createTable(Database db, boolean ifNotExists) {
         String constraint = ifNotExists? "IF NOT EXISTS ": "";
         db.execSQL("CREATE TABLE " + constraint + "\"COMPLAINT__DETAILS\" (" + //
-                "\"COMPLAINT__NO\" INTEGER PRIMARY KEY AUTOINCREMENT ," + // 0: Complaint_No
-                "\"COMP__K__NO\" TEXT," + // 1: Comp_K_No
-                "\"COMP__LOGIN__ID\" TEXT," + // 2: Comp_Login_Id
-                "\"COMP__DATE\" TEXT," + // 3: Comp_Date
-                "\"COMP__MSG\" TEXT," + // 4: Comp_Msg
-                "\"COMP__STATUS\" TEXT);"); // 5: Comp_Status
+                "\"COMPLAINT__ID\" INTEGER PRIMARY KEY AUTOINCREMENT ," + // 0: Complaint_Id
+                "\"K__NO\" TEXT," + // 1: K_No
+                "\"LOGIN_BY\" TEXT," + // 2: Login_by
+                "\"SUBMIT__DATE\" TEXT," + // 3: Submit_Date
+                "\"COMP__MSG\" TEXT," + // 4: comp_Msg
+                "\"STATUS\" TEXT);"); // 5: Status
     }
 
     /** Drops the underlying database table. */
@@ -61,34 +61,34 @@ public class Complaint_DetailsDao extends AbstractDao<Complaint_Details, Long> {
     protected final void bindValues(DatabaseStatement stmt, Complaint_Details entity) {
         stmt.clearBindings();
  
-        Long Complaint_No = entity.getComplaint_No();
-        if (Complaint_No != null) {
-            stmt.bindLong(1, Complaint_No);
+        Long Complaint_Id = entity.getComplaint_Id();
+        if (Complaint_Id != null) {
+            stmt.bindLong(1, Complaint_Id);
         }
  
-        String Comp_K_No = entity.getComp_K_No();
-        if (Comp_K_No != null) {
-            stmt.bindString(2, Comp_K_No);
+        String K_No = entity.getK_No();
+        if (K_No != null) {
+            stmt.bindString(2, K_No);
         }
  
-        String Comp_Login_Id = entity.getComp_Login_Id();
-        if (Comp_Login_Id != null) {
-            stmt.bindString(3, Comp_Login_Id);
+        String Login_by = entity.getLogin_by();
+        if (Login_by != null) {
+            stmt.bindString(3, Login_by);
         }
  
-        String Comp_Date = entity.getComp_Date();
-        if (Comp_Date != null) {
-            stmt.bindString(4, Comp_Date);
+        String Submit_Date = entity.getSubmit_Date();
+        if (Submit_Date != null) {
+            stmt.bindString(4, Submit_Date);
         }
  
-        String Comp_Msg = entity.getComp_Msg();
-        if (Comp_Msg != null) {
-            stmt.bindString(5, Comp_Msg);
+        String comp_Msg = entity.getComp_Msg();
+        if (comp_Msg != null) {
+            stmt.bindString(5, comp_Msg);
         }
  
-        String Comp_Status = entity.getComp_Status();
-        if (Comp_Status != null) {
-            stmt.bindString(6, Comp_Status);
+        String Status = entity.getStatus();
+        if (Status != null) {
+            stmt.bindString(6, Status);
         }
     }
 
@@ -96,34 +96,34 @@ public class Complaint_DetailsDao extends AbstractDao<Complaint_Details, Long> {
     protected final void bindValues(SQLiteStatement stmt, Complaint_Details entity) {
         stmt.clearBindings();
  
-        Long Complaint_No = entity.getComplaint_No();
-        if (Complaint_No != null) {
-            stmt.bindLong(1, Complaint_No);
+        Long Complaint_Id = entity.getComplaint_Id();
+        if (Complaint_Id != null) {
+            stmt.bindLong(1, Complaint_Id);
         }
  
-        String Comp_K_No = entity.getComp_K_No();
-        if (Comp_K_No != null) {
-            stmt.bindString(2, Comp_K_No);
+        String K_No = entity.getK_No();
+        if (K_No != null) {
+            stmt.bindString(2, K_No);
         }
  
-        String Comp_Login_Id = entity.getComp_Login_Id();
-        if (Comp_Login_Id != null) {
-            stmt.bindString(3, Comp_Login_Id);
+        String Login_by = entity.getLogin_by();
+        if (Login_by != null) {
+            stmt.bindString(3, Login_by);
         }
  
-        String Comp_Date = entity.getComp_Date();
-        if (Comp_Date != null) {
-            stmt.bindString(4, Comp_Date);
+        String Submit_Date = entity.getSubmit_Date();
+        if (Submit_Date != null) {
+            stmt.bindString(4, Submit_Date);
         }
  
-        String Comp_Msg = entity.getComp_Msg();
-        if (Comp_Msg != null) {
-            stmt.bindString(5, Comp_Msg);
+        String comp_Msg = entity.getComp_Msg();
+        if (comp_Msg != null) {
+            stmt.bindString(5, comp_Msg);
         }
  
-        String Comp_Status = entity.getComp_Status();
-        if (Comp_Status != null) {
-            stmt.bindString(6, Comp_Status);
+        String Status = entity.getStatus();
+        if (Status != null) {
+            stmt.bindString(6, Status);
         }
     }
 
@@ -135,36 +135,36 @@ public class Complaint_DetailsDao extends AbstractDao<Complaint_Details, Long> {
     @Override
     public Complaint_Details readEntity(Cursor cursor, int offset) {
         Complaint_Details entity = new Complaint_Details( //
-            cursor.isNull(offset + 0) ? null : cursor.getLong(offset + 0), // Complaint_No
-            cursor.isNull(offset + 1) ? null : cursor.getString(offset + 1), // Comp_K_No
-            cursor.isNull(offset + 2) ? null : cursor.getString(offset + 2), // Comp_Login_Id
-            cursor.isNull(offset + 3) ? null : cursor.getString(offset + 3), // Comp_Date
-            cursor.isNull(offset + 4) ? null : cursor.getString(offset + 4), // Comp_Msg
-            cursor.isNull(offset + 5) ? null : cursor.getString(offset + 5) // Comp_Status
+            cursor.isNull(offset + 0) ? null : cursor.getLong(offset + 0), // Complaint_Id
+            cursor.isNull(offset + 1) ? null : cursor.getString(offset + 1), // K_No
+            cursor.isNull(offset + 2) ? null : cursor.getString(offset + 2), // Login_by
+            cursor.isNull(offset + 3) ? null : cursor.getString(offset + 3), // Submit_Date
+            cursor.isNull(offset + 4) ? null : cursor.getString(offset + 4), // comp_Msg
+            cursor.isNull(offset + 5) ? null : cursor.getString(offset + 5) // Status
         );
         return entity;
     }
      
     @Override
     public void readEntity(Cursor cursor, Complaint_Details entity, int offset) {
-        entity.setComplaint_No(cursor.isNull(offset + 0) ? null : cursor.getLong(offset + 0));
-        entity.setComp_K_No(cursor.isNull(offset + 1) ? null : cursor.getString(offset + 1));
-        entity.setComp_Login_Id(cursor.isNull(offset + 2) ? null : cursor.getString(offset + 2));
-        entity.setComp_Date(cursor.isNull(offset + 3) ? null : cursor.getString(offset + 3));
+        entity.setComplaint_Id(cursor.isNull(offset + 0) ? null : cursor.getLong(offset + 0));
+        entity.setK_No(cursor.isNull(offset + 1) ? null : cursor.getString(offset + 1));
+        entity.setLogin_by(cursor.isNull(offset + 2) ? null : cursor.getString(offset + 2));
+        entity.setSubmit_Date(cursor.isNull(offset + 3) ? null : cursor.getString(offset + 3));
         entity.setComp_Msg(cursor.isNull(offset + 4) ? null : cursor.getString(offset + 4));
-        entity.setComp_Status(cursor.isNull(offset + 5) ? null : cursor.getString(offset + 5));
+        entity.setStatus(cursor.isNull(offset + 5) ? null : cursor.getString(offset + 5));
      }
     
     @Override
     protected final Long updateKeyAfterInsert(Complaint_Details entity, long rowId) {
-        entity.setComplaint_No(rowId);
+        entity.setComplaint_Id(rowId);
         return rowId;
     }
     
     @Override
     public Long getKey(Complaint_Details entity) {
         if(entity != null) {
-            return entity.getComplaint_No();
+            return entity.getComplaint_Id();
         } else {
             return null;
         }
@@ -172,7 +172,7 @@ public class Complaint_DetailsDao extends AbstractDao<Complaint_Details, Long> {
 
     @Override
     public boolean hasKey(Complaint_Details entity) {
-        return entity.getComplaint_No() != null;
+        return entity.getComplaint_Id() != null;
     }
 
     @Override

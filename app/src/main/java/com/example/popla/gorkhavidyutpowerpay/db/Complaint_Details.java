@@ -14,12 +14,12 @@ import org.greenrobot.greendao.annotation.*;
 public class Complaint_Details {
 
     @Id(autoincrement = true)
-    private Long Complaint_No;
-    private String Comp_K_No;
-    private String Comp_Login_Id;
-    private String Comp_Date;
-    private String Comp_Msg;
-    private String Comp_Status;
+    private Long Complaint_Id;
+    private String K_No;
+    private String Login_by;
+    private String Submit_Date;
+    private String comp_Msg;
+    private String Status;
 
     // KEEP FIELDS - put your custom fields here
     // KEEP FIELDS END
@@ -28,66 +28,66 @@ public class Complaint_Details {
     public Complaint_Details() {
     }
 
-    public Complaint_Details(Long Complaint_No) {
-        this.Complaint_No = Complaint_No;
+    public Complaint_Details(Long Complaint_Id) {
+        this.Complaint_Id = Complaint_Id;
     }
 
     @Generated
-    public Complaint_Details(Long Complaint_No, String Comp_K_No, String Comp_Login_Id, String Comp_Date, String Comp_Msg, String Comp_Status) {
-        this.Complaint_No = Complaint_No;
-        this.Comp_K_No = Comp_K_No;
-        this.Comp_Login_Id = Comp_Login_Id;
-        this.Comp_Date = Comp_Date;
-        this.Comp_Msg = Comp_Msg;
-        this.Comp_Status = Comp_Status;
+    public Complaint_Details(Long Complaint_Id, String K_No, String Login_by, String Submit_Date, String comp_Msg, String Status) {
+        this.Complaint_Id = Complaint_Id;
+        this.K_No = K_No;
+        this.Login_by = Login_by;
+        this.Submit_Date = Submit_Date;
+        this.comp_Msg = comp_Msg;
+        this.Status = Status;
     }
 
-    public Long getComplaint_No() {
-        return Complaint_No;
+    public Long getComplaint_Id() {
+        return Complaint_Id;
     }
 
-    public void setComplaint_No(Long Complaint_No) {
-        this.Complaint_No = Complaint_No;
+    public void setComplaint_Id(Long Complaint_Id) {
+        this.Complaint_Id = Complaint_Id;
     }
 
-    public String getComp_K_No() {
-        return Comp_K_No;
+    public String getK_No() {
+        return K_No;
     }
 
-    public void setComp_K_No(String Comp_K_No) {
-        this.Comp_K_No = Comp_K_No;
+    public void setK_No(String K_No) {
+        this.K_No = K_No;
     }
 
-    public String getComp_Login_Id() {
-        return Comp_Login_Id;
+    public String getLogin_by() {
+        return Login_by;
     }
 
-    public void setComp_Login_Id(String Comp_Login_Id) {
-        this.Comp_Login_Id = Comp_Login_Id;
+    public void setLogin_by(String Login_by) {
+        this.Login_by = Login_by;
     }
 
-    public String getComp_Date() {
-        return Comp_Date;
+    public String getSubmit_Date() {
+        return Submit_Date;
     }
 
-    public void setComp_Date(String Comp_Date) {
-        this.Comp_Date = Comp_Date;
+    public void setSubmit_Date(String Submit_Date) {
+        this.Submit_Date = Submit_Date;
     }
 
     public String getComp_Msg() {
-        return Comp_Msg;
+        return comp_Msg;
     }
 
-    public void setComp_Msg(String Comp_Msg) {
-        this.Comp_Msg = Comp_Msg;
+    public void setComp_Msg(String comp_Msg) {
+        this.comp_Msg = comp_Msg;
     }
 
-    public String getComp_Status() {
-        return Comp_Status;
+    public String getStatus() {
+        return Status;
     }
 
-    public void setComp_Status(String Comp_Status) {
-        this.Comp_Status = Comp_Status;
+    public void setStatus(String Status) {
+        this.Status = Status;
     }
 
     // KEEP METHODS - put your custom methods here

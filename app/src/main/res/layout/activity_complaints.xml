@@ -73,12 +73,12 @@
             android:layout_centerInParent="true"
             android:onClick="BookComplaint"
             />
-        <TextView
+        <EditText
             android:id="@+id/Temporary"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/Book_complaint"
-            android:text="Komal"/>
+            />
 
 
 

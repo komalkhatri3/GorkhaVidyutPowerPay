@@ -9,11 +9,7 @@ import android.widget.ListView;
 import com.example.popla.gorkhavidyutpowerpay.AppController;
 import com.example.popla.gorkhavidyutpowerpay.R;
 import com.example.popla.gorkhavidyutpowerpay.db.Bill_details;
-import com.example.popla.gorkhavidyutpowerpay.db.Bill_detailsDao;
 import com.example.popla.gorkhavidyutpowerpay.db.DaoSession;
-import com.example.popla.gorkhavidyutpowerpay.db.Employee;
-
-import org.greenrobot.greendao.query.QueryBuilder;
 
 import java.util.ArrayList;
 import java.util.List;
