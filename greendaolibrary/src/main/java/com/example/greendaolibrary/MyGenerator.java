@@ -24,6 +24,7 @@ public class MyGenerator {
         addEmployeeEntities(schema);
         addRegisterEntities(schema);
         addNewConnectionEntities(schema);
+        addComplaints(schema);
 
     }
 
@@ -82,6 +83,17 @@ public class MyGenerator {
         new_connection.addStringProperty("applicant_aadhar");
         new_connection.addStringProperty("submit_date");
         return new_connection;
+    }
+    private static Entity addComplaints(final Schema schema)
+    {
+        Entity complaint_details=schema.addEntity("Complaint_Details");
+        complaint_details.addLongProperty("Complaint_No").primaryKey().autoincrement();
+        complaint_details.addStringProperty("Comp_K_No");
+        complaint_details.addStringProperty("Comp_Login_Id");
+        complaint_details.addStringProperty("Comp_Date");
+        complaint_details.addStringProperty("Comp_Msg");
+        complaint_details.addStringProperty("Comp_Status");
+        return complaint_details;
     }
  //    private static Entity addPhonesEntities(final Schema schema) {
  //        Entity phone = schema.addEntity("Phone");

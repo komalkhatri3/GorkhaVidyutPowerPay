@@ -22,9 +22,13 @@
         <activity android:name=".activity.Employee_Data.ShowAllEmploye" />
         <activity android:name=".activity.Employee_Data.ParticularEmployeeDetail" />
         <activity android:name=".activity.Employee_Data.AllEmployeeLayouts" />
+        <activity android:name=".activity.ApproverP.Approver" />
+        <activity android:name=".activity.ApproverP.ApproverAllDetail" />
+        <activity android:name=".activity.Applier.Applier1" />
+        <activity android:name=".activity.Applier.ApplierDetail" />
+        <activity android:name=".activity.Verifier.VerifierNewConnection"></activity>
         <activity android:name=".activity.AddNewConnection" />
-        <activity android:name=".activity.Verifier.VerifierNewConnection" />
-        <activity android:name=".activity.Verifier.ParticulaApplicant"></activity>
+        <activity android:name=".activity.Complaints"></activity>
     </application>
 
 </manifest>

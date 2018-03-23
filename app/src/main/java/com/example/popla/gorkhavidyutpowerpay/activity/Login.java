@@ -12,6 +12,7 @@ import android.widget.Toast;
 import com.example.popla.gorkhavidyutpowerpay.AppController;
 import com.example.popla.gorkhavidyutpowerpay.Power;
 import com.example.popla.gorkhavidyutpowerpay.R;
+import com.example.popla.gorkhavidyutpowerpay.activity.ApproverP.Approver;
 import com.example.popla.gorkhavidyutpowerpay.activity.Verifier.VerifierNewConnection;
 import com.example.popla.gorkhavidyutpowerpay.db.DaoSession;
 import com.example.popla.gorkhavidyutpowerpay.db.Employee;
@@ -30,7 +31,7 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         emailid =(EditText) findViewById(R.id.UserName) ;
-       pass = (EditText)findViewById(R.id.password);
+        pass = (EditText)findViewById(R.id.password);
         // insertDataIntoDb();
         //getUserDATA();
     }
@@ -73,12 +74,12 @@ public class Login extends AppCompatActivity {
     }
     public void sign1(View view)
     {
-        intent = new Intent(this,VerifierNewConnection.class);
+        intent = new Intent(this,Approver.class);
         startActivity(intent);
     }
     public void Add(View v)
     {
-        intent = new Intent(this,AddNewConnection.class);
+        intent = new Intent(this,Complaints.class);
         startActivity(intent);
     }
 }
