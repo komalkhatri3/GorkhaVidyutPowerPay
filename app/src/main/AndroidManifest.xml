@@ -30,7 +30,8 @@
         <activity android:name=".activity.PutBillDetail" />
         <activity android:name="com.narendra.myapplication.BillDetails" />
         <activity android:name=".activity.Notifications" />
-        <activity android:name=".activity.BillDetailss"></activity>
+        <activity android:name=".activity.BillDetailss" />
+        <activity android:name=".activity.MainActivity"></activity>
     </application>
 
 </manifest>
