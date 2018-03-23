@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.popla.gorkhavidyutpowerpay.activity.SignUp">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="30dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Put Bill Details"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/sign_up"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_marginTop="30dp"
+            android:layout_height="wrap_content"
+            android:hint="Enter K-Number"
+            android:id="@+id/edit1"
+            android:layout_below="@+id/sign_up"
+
+            />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edit1"
+            android:gravity="center"
+
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:text="check"
+            android:id="@+id/btn"
+            android:onClick="check"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Name"
+            android:inputType="textEmailAddress"
+            android:id="@+id/edit2"
+            android:paddingTop="30dp"
+            android:layout_below="@+id/btn"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:paddingTop="30dp"
+            android:layout_height="wrap_content"
+            android:hint="Enter Previous Reading"
+            android:inputType="number"
+            android:id="@+id/edit3"
+            android:layout_below="@+id/edit2"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="30dp"
+            android:hint="Enter Current Reading"
+            android:inputType="number"
+            android:id="@+id/edit4"
+            android:layout_below="@+id/edit3"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:paddingTop="30dp"
+            android:layout_height="wrap_content"
+            android:hint="Enter Bill Generated Date"
+            android:inputType="date"
+
+            android:id="@+id/edit5"
+            android:layout_below="@+id/edit4"
+            />
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edit5"
+            android:gravity="center"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:text="Submit"
+            android:onClick="Submit"/>
+
+
+    </RelativeLayout>
+
+</ScrollView>

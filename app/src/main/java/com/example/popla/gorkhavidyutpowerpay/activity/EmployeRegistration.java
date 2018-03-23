@@ -14,8 +14,10 @@ import android.widget.Toast;
 import com.example.popla.gorkhavidyutpowerpay.AppController;
 import com.example.popla.gorkhavidyutpowerpay.R;
 import com.example.popla.gorkhavidyutpowerpay.activity.Employee_Data.ShowAllEmploye;
+import com.example.popla.gorkhavidyutpowerpay.db.Bill_details;
 import com.example.popla.gorkhavidyutpowerpay.db.DaoSession;
 import com.example.popla.gorkhavidyutpowerpay.db.Employee;
+import com.example.popla.gorkhavidyutpowerpay.db.Register;
 
 import java.util.Calendar;
 
@@ -66,9 +68,13 @@ public class EmployeRegistration extends AppCompatActivity {
 
         Toast.makeText(this,"Employe Registered",Toast.LENGTH_LONG).show();
         DaoSession daoSession =((AppController)getApplication()).getDaoSession();
-
+        Login login = new Login();
         Employee employees = new Employee();
+        Register register = new Register();
+
         //employees.setEmp_id(1l);
+
+
         employees.setEmp_name(ename.getText().toString());
         employees.setEmp_email_id(emailid.getText().toString());
         employees.setEmp_mobile(emobile.getText().toString());

@@ -24,7 +24,9 @@ public class MyGenerator {
         addEmployeeEntities(schema);
         addRegisterEntities(schema);
         addNewConnectionEntities(schema);
-        addComplaints(schema);
+
+        addBill_detailsEntities(schema);
+
 
     }
 
@@ -68,6 +70,8 @@ public class MyGenerator {
         Entity new_connection=schema.addEntity("New_Connection");
         new_connection.addLongProperty("application_id").primaryKey().autoincrement();
         new_connection.addStringProperty("applicant_name");
+
+
         new_connection.addStringProperty("applicant_fname");
         new_connection.addStringProperty("applicant_DOB");
         new_connection.addStringProperty("applicant_occupaion");
@@ -82,18 +86,23 @@ public class MyGenerator {
         new_connection.addStringProperty("applicant_pos");
         new_connection.addStringProperty("applicant_aadhar");
         new_connection.addStringProperty("submit_date");
+        new_connection.addStringProperty("k_no");
         return new_connection;
     }
-    private static Entity addComplaints(final Schema schema)
+
+    private static Entity addBill_detailsEntities(final Schema schema)
     {
-        Entity complaint_details=schema.addEntity("Complaint_Details");
-        complaint_details.addLongProperty("Complaint_No").primaryKey().autoincrement();
-        complaint_details.addStringProperty("Comp_K_No");
-        complaint_details.addStringProperty("Comp_Login_Id");
-        complaint_details.addStringProperty("Comp_Date");
-        complaint_details.addStringProperty("Comp_Msg");
-        complaint_details.addStringProperty("Comp_Status");
-        return complaint_details;
+        Entity billdetails=schema.addEntity("Bill_details");
+        billdetails.addLongProperty("Bill_id").primaryKey().autoincrement();
+        billdetails.addStringProperty("k_no");
+        billdetails.addStringProperty("previous_read");
+        billdetails.addStringProperty("current_read");
+        billdetails.addDateProperty("generated_date");
+        billdetails.addStringProperty("paid_by");
+        billdetails.addStringProperty("receipt_no");
+        billdetails.addStringProperty("status");
+
+        return billdetails;
     }
  //    private static Entity addPhonesEntities(final Schema schema) {
  //        Entity phone = schema.addEntity("Phone");

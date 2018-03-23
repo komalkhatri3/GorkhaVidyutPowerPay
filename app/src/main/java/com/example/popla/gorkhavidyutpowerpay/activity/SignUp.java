@@ -1,6 +1,5 @@
 package com.example.popla.gorkhavidyutpowerpay.activity;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -11,8 +10,6 @@ import com.example.popla.gorkhavidyutpowerpay.AppController;
 import com.example.popla.gorkhavidyutpowerpay.R;
 import com.example.popla.gorkhavidyutpowerpay.db.DaoSession;
 import com.example.popla.gorkhavidyutpowerpay.db.Register;
-import com.example.popla.gorkhavidyutpowerpay.db.User;
-import com.example.popla.gorkhavidyutpowerpay.db.UserDao;
 
 public class SignUp extends AppCompatActivity {
 

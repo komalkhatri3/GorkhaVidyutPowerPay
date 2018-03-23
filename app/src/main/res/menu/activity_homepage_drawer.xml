@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/addconn"
+            android:icon="@drawable/connection"
+            android:title="Add New Connection" />
+        <item
+            android:id="@+id/paybill"
+            android:icon="@drawable/paybills"
+            android:title="Pay Bill" />
+        <item
+            android:id="@+id/complaints"
+            android:icon="@drawable/complaints"
+            android:title="Complaints" />
+        <item
+            android:id="@+id/notification"
+            android:icon="@drawable/notifications"
+            android:title="Notifications" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/setting"
+                android:icon="@drawable/ic_settings_black_24dp"
+                android:title="Manage Account" />
+            <item
+                android:id="@+id/help"
+                android:icon="@drawable/help"
+                android:title="Help" />
+        </menu>
+    </item>
+
+</menu>
