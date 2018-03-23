@@ -29,7 +29,6 @@ public class Bill_detailsDao extends AbstractDao<Bill_details, Long> {
         public final static Property Generated_date = new Property(4, java.util.Date.class, "generated_date", false, "GENERATED_DATE");
         public final static Property Paid_by = new Property(5, String.class, "paid_by", false, "PAID_BY");
         public final static Property Receipt_no = new Property(6, String.class, "receipt_no", false, "RECEIPT_NO");
-        public final static Property Status = new Property(7, String.class, "status", false, "STATUS");
     }
 
 
@@ -51,8 +50,7 @@ public class Bill_detailsDao extends AbstractDao<Bill_details, Long> {
                 "\"CURRENT_READ\" TEXT," + // 3: current_read
                 "\"GENERATED_DATE\" INTEGER," + // 4: generated_date
                 "\"PAID_BY\" TEXT," + // 5: paid_by
-                "\"RECEIPT_NO\" TEXT," + // 6: receipt_no
-                "\"STATUS\" TEXT);"); // 7: status
+                "\"RECEIPT_NO\" TEXT);"); // 6: receipt_no
     }
 
     /** Drops the underlying database table. */
@@ -99,11 +97,6 @@ public class Bill_detailsDao extends AbstractDao<Bill_details, Long> {
         if (receipt_no != null) {
             stmt.bindString(7, receipt_no);
         }
- 
-        String status = entity.getStatus();
-        if (status != null) {
-            stmt.bindString(8, status);
-        }
     }
 
     @Override
@@ -144,11 +137,6 @@ public class Bill_detailsDao extends AbstractDao<Bill_details, Long> {
         if (receipt_no != null) {
             stmt.bindString(7, receipt_no);
         }
- 
-        String status = entity.getStatus();
-        if (status != null) {
-            stmt.bindString(8, status);
-        }
     }
 
     @Override
@@ -165,8 +153,7 @@ public class Bill_detailsDao extends AbstractDao<Bill_details, Long> {
             cursor.isNull(offset + 3) ? null : cursor.getString(offset + 3), // current_read
             cursor.isNull(offset + 4) ? null : new java.util.Date(cursor.getLong(offset + 4)), // generated_date
             cursor.isNull(offset + 5) ? null : cursor.getString(offset + 5), // paid_by
-            cursor.isNull(offset + 6) ? null : cursor.getString(offset + 6), // receipt_no
-            cursor.isNull(offset + 7) ? null : cursor.getString(offset + 7) // status
+            cursor.isNull(offset + 6) ? null : cursor.getString(offset + 6) // receipt_no
         );
         return entity;
     }
@@ -180,7 +167,6 @@ public class Bill_detailsDao extends AbstractDao<Bill_details, Long> {
         entity.setGenerated_date(cursor.isNull(offset + 4) ? null : new java.util.Date(cursor.getLong(offset + 4)));
         entity.setPaid_by(cursor.isNull(offset + 5) ? null : cursor.getString(offset + 5));
         entity.setReceipt_no(cursor.isNull(offset + 6) ? null : cursor.getString(offset + 6));
-        entity.setStatus(cursor.isNull(offset + 7) ? null : cursor.getString(offset + 7));
      }
     
     @Override
