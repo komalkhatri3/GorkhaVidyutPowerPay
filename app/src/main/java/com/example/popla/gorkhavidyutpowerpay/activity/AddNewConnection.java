@@ -1,6 +1,7 @@
 package com.example.popla.gorkhavidyutpowerpay.activity;
 
 import android.app.DatePickerDialog;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -21,7 +22,7 @@ import com.example.popla.gorkhavidyutpowerpay.db.New_Connection;
 
 import java.util.Calendar;
 
-public class AddNewConnection extends FragmentActivity {
+public class AddNewConnection extends FragmentActivity{
     //DateSettings dateSettings;
 
     Spinner spinner;
