@@ -29,7 +29,8 @@
         <activity android:name=".activity.PayBill" />
         <activity android:name=".activity.PutBillDetail" />
         <activity android:name="com.narendra.myapplication.BillDetails" />
-        <activity android:name=".activity.Notifications"></activity>
+        <activity android:name=".activity.Notifications" />
+        <activity android:name=".activity.BillDetailss"></activity>
     </application>
 
 </manifest>
