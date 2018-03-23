@@ -9,13 +9,7 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import com.example.popla.gorkhavidyutpowerpay.AppController;
 import com.example.popla.gorkhavidyutpowerpay.R;
-import com.example.popla.gorkhavidyutpowerpay.db.Complaint_Details;
-import com.example.popla.gorkhavidyutpowerpay.db.DaoSession;
-
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
 
 public class Complaints extends AppCompatActivity {
     Spinner spinner,spinner2;
@@ -97,6 +91,7 @@ public class Complaints extends AppCompatActivity {
     }
     public void BookComplaint(View view)
     {
+        /*
         Calendar calendar = Calendar.getInstance();
         SimpleDateFormat mdformat = new SimpleDateFormat("dd / MM / YYYY ");
         String strDate = "Current Date : " + mdformat.format(calendar.getTime());
@@ -111,5 +106,6 @@ public class Complaints extends AppCompatActivity {
         complaint_details.setComp_Msg("");
         complaint_details.setComp_Status("");
         daoSession.getComplaint_DetailsDao().insert(complaint_details);
+    */
     }
 }

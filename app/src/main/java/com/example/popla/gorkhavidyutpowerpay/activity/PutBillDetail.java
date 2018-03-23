@@ -82,6 +82,8 @@ public class PutBillDetail extends AppCompatActivity {
         Date date = new Date();
         String d= dateFormat.format(date).toString();
         generateddate.setText(dateFormat.format(date));
+        DaoSession daoSession =((AppController)getApplication()).getDaoSession();
+
         Bill_details bill_details=new Bill_details();
 
         bill_details.setK_no(kno.getText().toString());
@@ -89,6 +91,8 @@ public class PutBillDetail extends AppCompatActivity {
         bill_details.setPrevious_read(prev_read.getText().toString());
         bill_details.setCurrent_read(curr_read.getText().toString());
         bill_details.setGenerated_date(date);
+        daoSession.getBill_detailsDao().insert(bill_details);
+
 //        bill_details.setGenerated_date(date.getText().toString());
 
 
