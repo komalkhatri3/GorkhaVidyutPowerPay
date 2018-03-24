@@ -41,7 +41,7 @@ public class VerifierAdapter extends ArrayAdapter {
         Button b1;
 
     }
-    public void add(Object object)
+    public void add(VerifierDataProvider object)
     {
         super.add(object);
         list.add(object);
@@ -82,10 +82,10 @@ public class VerifierAdapter extends ArrayAdapter {
             @Override
             public void onClick(View v) {
                 String s="App_id";
-                Intent i = new Intent(mcontext,ParticulaApplicant.class);
+                Intent i = new Intent(v.getContext(),ParticulaApplicant.class);
                 i.putExtra(s,handler.ApplicationId.getText().toString());
-                i.setFlags(i.FLAG_ACTIVITY_NEW_TASK);
-                mcontext.startActivity(i);
+                i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                v.getContext().startActivity(i);
             }
         });
 

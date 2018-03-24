@@ -92,7 +92,6 @@ public class EmployeeAdapter extends ArrayAdapter{
         });
 
 
-
         EmployeeDataProvider dataProvider = (EmployeeDataProvider) this.getItem(position);
         handler.name.setText(dataProvider.getEmp_name());
         handler.emailid.setText(dataProvider.getEmp_email());

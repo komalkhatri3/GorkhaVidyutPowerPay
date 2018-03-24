@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.popla.gorkhavidyutpowerpay.activity.Complaints">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/enter_KN"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="20dp"
+            android:hint="K Number"
+            />
+        <TextView
+            android:id="@+id/Com_Type_Text"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/enter_KN"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="20dp"
+            android:text="Complaint Type"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+        <Spinner
+            android:id="@+id/complaint_spinner"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/enter_KN"
+            android:layout_toRightOf="@+id/Com_Type_Text"
+            android:layout_alignParentRight="true"/>
+        <TextView
+            android:id="@+id/sCom_Type_Text"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/Com_Type_Text"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="20dp"
+            android:text="Sub Complaint Type"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+
+        <Spinner
+            android:id="@+id/Sub_com_spin"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/complaint_spinner"
+            android:layout_toRightOf="@id/sCom_Type_Text"
+            android:layout_alignParentRight="true"
+            />
+        <EditText
+            android:id="@+id/other_comp"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Sub_com_spin"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"/>
+        <Button
+            android:id="@+id/Book_complaint"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/other_comp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="16dp"
+            android:text="Book Complaint"
+            android:layout_centerInParent="true"
+            android:onClick="BookComplaint"
+            />
+        <EditText
+            android:id="@+id/Temporary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Book_complaint"
+            />
+
+
+
+    </RelativeLayout>
+
+</ScrollView>

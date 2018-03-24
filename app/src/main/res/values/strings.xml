@@ -1,6 +1,12 @@
 <resources>
     <string name="app_name">GorkhaVidyutPowerPay</string>
     <string name="title_activity_sign_up">SignUp</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
     <string-array name="designation">
         <item> </item>
         <item>Verifier</item>
@@ -102,5 +108,32 @@
         <item>  </item>
         <item>Domestic</item>
         <item>Non Domestic</item>
+    </string-array>
+    <string name="title_activity_homepage">Homepage</string>
+    <string-array name="Complaint_Type">
+        <item>Meter Problem</item>
+        <item>Voltage Problem</item>
+        <item>Power Cut Problem</item>
+        <item>Bill Related Problem</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="Sconnection_TypeM">
+        <item>Meter Is Not Working</item>
+        <item>Meter Is Damaged</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="Sconnection_TypeV">
+        <item>High Voltage Problem</item>
+        <item>Low Voltage Problem</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="Sconnection_TypeB">
+        <item>Bill Due Problem</item>
+        <item>EXtra Amount problem</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="Sconnection_TypeP">
+        <item>Continuos PowerCut</item>
+        <item>Other</item>
     </string-array>
 </resources>

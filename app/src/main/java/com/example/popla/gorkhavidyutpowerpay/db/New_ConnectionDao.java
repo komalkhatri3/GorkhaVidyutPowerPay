@@ -38,6 +38,7 @@ public class New_ConnectionDao extends AbstractDao<New_Connection, Long> {
         public final static Property Applicant_pos = new Property(13, String.class, "applicant_pos", false, "APPLICANT_POS");
         public final static Property Applicant_aadhar = new Property(14, String.class, "applicant_aadhar", false, "APPLICANT_AADHAR");
         public final static Property Submit_date = new Property(15, String.class, "submit_date", false, "SUBMIT_DATE");
+        public final static Property K_no = new Property(16, String.class, "k_no", false, "K_NO");
     }
 
 
@@ -68,7 +69,8 @@ public class New_ConnectionDao extends AbstractDao<New_Connection, Long> {
                 "\"APPLICANT_REQ_KV\" REAL," + // 12: applicant_reqKV
                 "\"APPLICANT_POS\" TEXT," + // 13: applicant_pos
                 "\"APPLICANT_AADHAR\" TEXT," + // 14: applicant_aadhar
-                "\"SUBMIT_DATE\" TEXT);"); // 15: submit_date
+                "\"SUBMIT_DATE\" TEXT," + // 15: submit_date
+                "\"K_NO\" TEXT);"); // 16: k_no
     }
 
     /** Drops the underlying database table. */
@@ -160,6 +162,11 @@ public class New_ConnectionDao extends AbstractDao<New_Connection, Long> {
         if (submit_date != null) {
             stmt.bindString(16, submit_date);
         }
+ 
+        String k_no = entity.getK_no();
+        if (k_no != null) {
+            stmt.bindString(17, k_no);
+        }
     }
 
     @Override
@@ -245,6 +252,11 @@ public class New_ConnectionDao extends AbstractDao<New_Connection, Long> {
         if (submit_date != null) {
             stmt.bindString(16, submit_date);
         }
+ 
+        String k_no = entity.getK_no();
+        if (k_no != null) {
+            stmt.bindString(17, k_no);
+        }
     }
 
     @Override
@@ -270,7 +282,8 @@ public class New_ConnectionDao extends AbstractDao<New_Connection, Long> {
             cursor.isNull(offset + 12) ? null : cursor.getFloat(offset + 12), // applicant_reqKV
             cursor.isNull(offset + 13) ? null : cursor.getString(offset + 13), // applicant_pos
             cursor.isNull(offset + 14) ? null : cursor.getString(offset + 14), // applicant_aadhar
-            cursor.isNull(offset + 15) ? null : cursor.getString(offset + 15) // submit_date
+            cursor.isNull(offset + 15) ? null : cursor.getString(offset + 15), // submit_date
+            cursor.isNull(offset + 16) ? null : cursor.getString(offset + 16) // k_no
         );
         return entity;
     }
@@ -293,6 +306,7 @@ public class New_ConnectionDao extends AbstractDao<New_Connection, Long> {
         entity.setApplicant_pos(cursor.isNull(offset + 13) ? null : cursor.getString(offset + 13));
         entity.setApplicant_aadhar(cursor.isNull(offset + 14) ? null : cursor.getString(offset + 14));
         entity.setSubmit_date(cursor.isNull(offset + 15) ? null : cursor.getString(offset + 15));
+        entity.setK_no(cursor.isNull(offset + 16) ? null : cursor.getString(offset + 16));
      }
     
     @Override

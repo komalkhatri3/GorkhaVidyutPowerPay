@@ -20,11 +20,17 @@
         <activity android:name=".activity.SignUp" />
         <activity android:name=".activity.EmployeRegistration" />
         <activity android:name=".activity.Employee_Data.ShowAllEmploye" />
-        <activity android:name=".activity.Employee_Data.ParticularEmployeeDetail" />
-        <activity android:name=".activity.Employee_Data.AllEmployeeLayouts" />
-        <activity android:name=".activity.AddNewConnection" />
         <activity android:name=".activity.Verifier.VerifierNewConnection" />
-        <activity android:name=".activity.Verifier.ParticulaApplicant"></activity>
+        <activity android:name=".activity.AddNewConnection" />
+        <activity
+            android:name=".activity.Homepage"
+            android:label="@string/title_activity_homepage"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".activity.PayBill" />
+        <activity android:name=".activity.PutBillDetail" />
+        <activity android:name="com.narendra.myapplication.BillDetails" />
+        <activity android:name=".activity.Notifications" />
+        <activity android:name=".activity.BillDetailss" />
     </application>
 
 </manifest>
