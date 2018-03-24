@@ -7,7 +7,7 @@
     tools:context="com.example.popla.gorkhavidyutpowerpay.activity.EmployeRegistration">
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:paddingTop="30dp"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
@@ -69,27 +69,7 @@
             android:layout_toRightOf="@+id/age"
 
             android:layout_marginStart="68dp" />
-        <EditText
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:hint="mm"
-            android:id="@+id/months"
-            android:inputType="number"
-            android:layout_alignBaseline="@+id/age"
-            android:layout_toLeftOf="@+id/age"
-            android:paddingTop="30dp"
 
-            android:layout_toEndOf="@+id/dates" />
-        <EditText
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:hint="yyyy"
-            android:id="@+id/years"
-            android:paddingTop="30dp"
-            android:inputType="number"
-            android:layout_alignBaseline="@+id/age"
-            android:layout_toLeftOf="@+id/age"
-            android:layout_toEndOf="@+id/months" />
         <TextView
             android:paddingTop="30dp"
             android:layout_width="150dp"
@@ -105,7 +85,7 @@
             android:layout_height="50dp"
             android:id="@+id/designation"
             android:paddingTop="30dp"
-            android:layout_below="@+id/years">
+            android:layout_below="@+id/dates">
 
 
         </Spinner>

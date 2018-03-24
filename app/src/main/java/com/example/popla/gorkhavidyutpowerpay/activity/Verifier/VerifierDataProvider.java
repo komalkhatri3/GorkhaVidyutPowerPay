@@ -18,9 +18,9 @@ public class VerifierDataProvider {
     }
 
     public VerifierDataProvider(String app_id, String app_Name, String app_Area) {
-        App_id = app_id;
-        App_Name = app_Name;
-        App_Area = app_Area;
+        this.setApp_id(app_id);
+        this.setApp_Name(app_Name);
+        this.setApp_Area(app_Area);
     }
 
     public void setApp_Name(String app_Name) {
