@@ -1,7 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android">
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,14 +7,23 @@
     android:paddingBottom="16dp"
     android:paddingLeft="18dp"
     android:paddingRight="18dp"
-    android:paddingTop="130dp"
-    android:background="@drawable/ic_lock_white_24dp">
+    android:paddingTop="0dp"
+    android:background="@drawable/leaf">
     tools:context="com.example.popla.gorkhavidyutpowerpay.activity.Login">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Login"
+        android:layout_marginTop="50dp"
+        android:textSize="25dp"
+        android:textStyle="bold" />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/UserName"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="50dp"
         android:padding="16dp"
         android:ems="1"
         android:inputType="textEmailAddress"
@@ -27,15 +33,15 @@
         android:textColorHint="#fff"
         android:drawableLeft="@drawable/ic_person_white_24dp"
         />
-    <EditText
+    <android.support.design.widget.TextInputEditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/password"
         android:layout_marginTop="16dp"
         android:padding="16dp"
         android:ems="1"
+        android:id="@+id/password"
         android:inputType="textPassword"
-        android:hint="......"
+        android:hint="Password"
         android:textColorHint="#fff"
         android:background="#6ef4f4f4"
         android:drawablePadding="78dp"
@@ -46,21 +52,25 @@
         android:layout_height="wrap_content"
         android:id="@+id/checkbox1"
         android:hint="Show Password"
-        android:layout_marginTop="10dp"
+
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:layout_marginTop="11dp"
+        android:layout_marginBottom="1dp"
         />
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/Login_button"
         android:layout_gravity="center_horizontal"
-        android:text="Login in"
+        android:text="Log in"
         android:textAllCaps="true"
         android:textColor="#000000"
         android:background="@drawable/background_login_two"
         android:paddingLeft="48dp"
         android:paddingRight="48dp"
         android:layout_marginTop="12dp"
-        android:onClick="LogIn"/>
+        />
 
     <Button
         android:id="@+id/SignUp_Button"
@@ -73,11 +83,10 @@
         android:background="@drawable/background_login_sign_up"
         android:paddingLeft="48dp"
         android:paddingRight="48dp"
-        android:layout_marginTop="16dp"
-
+        android:layout_marginTop="28dp"
         android:onClick="sign"
         />
-    <TextView
+    <!--<TextView
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:layout_marginTop="25dp"
@@ -101,6 +110,5 @@
         android:layout_marginTop="20dp"
         android:text="show"
         android:onClick="sign1"
-        />
+        />-->
 </LinearLayout>
-</ScrollView>

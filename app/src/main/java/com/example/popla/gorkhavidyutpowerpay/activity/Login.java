@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -33,33 +34,76 @@ public class Login extends AppCompatActivity {
        pass = (EditText)findViewById(R.id.password);
        cb1=(CheckBox)findViewById(R.id.checkbox1);
         login=(Button)findViewById(R.id.Login_button);
-        login.setOnClickListener(new View.OnClickListener() {
+        cb1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
             @Override
-            public void onClick(View v) {
-             //   register();
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(!isChecked){
+                    pass.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                }
+                else
+                    pass.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
             }
         });
-        // insertDataIntoDb();
-        //getUserDATA();
-    /*    login.setOnClickListener(new View.OnClickListener()
-        {
-            public void onClick(View v)
+        login.setOnClickListener(new View.OnClickListener() {
+            public  void onClick(View view)
             {
-             //   if(!vali)
+                register();
             }
-
-        });*/
-    cb1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-        @Override
-        public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-            if(!isChecked){
-                pass.setTransformationMethod(PasswordTransformationMethod.getInstance());
-            }
-            else
-                pass.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
-        }
-    });
+        });
     }
+    public void register()
+    {
+        intialize();
+        if(!validate())
+        {
+
+        }
+        else
+        {
+            onLogInSuccess();
+        }
+
+    }
+    public void onLogInSuccess()
+    {
+        //after validate button Click Content
+        Intent intent;  int count=0;
+        if ((emailid.getText().toString().equals("1234"))&&(pass.getText().toString().equals("1234")))
+        {
+            intent =new Intent(this, EmployeRegistration.class  );
+            startActivity(intent);
+        }
+        else if((emailid.getText().toString()) != null) {
+            ListView listView;
+            List<String> eid;
+            List<String> pass;
+            listView = (ListView) findViewById(R.id.list_view);
+            eid = new ArrayList<String>();
+            pass = new ArrayList<String>();
+
+        }
+    }
+    public void intialize()
+    {
+        username=emailid.getText().toString().trim();
+        password=pass.getText().toString().trim();
+    }
+
+    public boolean validate() {
+        boolean valid=true;
+        if(username.isEmpty()||!Patterns.EMAIL_ADDRESS.matcher(username).matches()){
+            emailid.setError("Please Enter Valid Email Id");
+            valid=false;
+        }
+        if (password.isEmpty()||pass.length()>32)
+        {
+            pass.setError("Please Enter Password");
+            valid=false;
+        }
+        return valid;
+    }
+
+
 
    /* private void getUserDATA() {
         DaoSession daoSession = ((AppController) getApplication()).getDaoSession();
@@ -89,12 +133,7 @@ public class Login extends AppCompatActivity {
 
    }
    */
-   public  void intialize()
-   {
-      username=emailid.getText().toString().trim();
-       password=pass.getText().toString().trim();
-   }
-    Intent intent;
+  /*Intent intent;
     public void LogIn(View view)
     {
         int count=0;
@@ -138,15 +177,15 @@ public class Login extends AppCompatActivity {
             {
                 Toast.makeText(this,"Not Registered User",Toast.LENGTH_LONG).show();
             }
-            */
+
         }
-    }
+    }*/
     public void sign(View v)
     {
-        Intent r= new Intent(this, Homepage.class);
+        Intent r= new Intent(this, SignUp.class);
         startActivity(r);
     }
-    public void sign1(View view)
+    /*public void sign1(View view)
     {
         Intent y= new Intent(this,PutBillDetail.class);
         startActivity(y);
@@ -155,5 +194,5 @@ public class Login extends AppCompatActivity {
     {
         intent = new Intent(this,AddNewConnection.class);
         startActivity(intent);
-    }
+    }*/
 }
