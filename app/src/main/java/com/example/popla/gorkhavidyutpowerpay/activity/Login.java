@@ -34,12 +34,7 @@ public class Login extends AppCompatActivity {
        pass = (EditText)findViewById(R.id.password);
        cb1=(CheckBox)findViewById(R.id.checkbox1);
         login=(Button)findViewById(R.id.Login_button);
-        login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-             //   register();
-            }
-        });
+        
         // insertDataIntoDb();
         //getUserDATA();
     /*    login.setOnClickListener(new View.OnClickListener()
