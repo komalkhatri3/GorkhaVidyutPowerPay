@@ -68,9 +68,9 @@ public class Login extends AppCompatActivity {
     {
         //after validate button Click Content
         Intent intent;  int count=0;
-        if ((emailid.getText().toString().equals("1234"))&&(pass.getText().toString().equals("1234")))
+        if ((emailid.getText().toString().equals("ab@gmail.com"))&&(pass.getText().toString().equals("1234")))
         {
-            intent =new Intent(this, EmployeRegistration.class  );
+            intent =new Intent(this,AddNewConnection.class  );
             startActivity(intent);
         }
         else if((emailid.getText().toString()) != null) {
