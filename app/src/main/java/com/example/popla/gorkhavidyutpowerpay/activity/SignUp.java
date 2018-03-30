@@ -32,7 +32,7 @@ public class SignUp extends AppCompatActivity {
         uaadhar = (EditText)findViewById(R.id.edit4);
         upassword = (EditText)findViewById(R.id.edit5);
         ukno = (EditText)findViewById(R.id.edit7);
-<<<<<<< HEAD
+
         repassword=(EditText)findViewById(R.id.edit6);
         b1=(Button)findViewById(R.id.signup);
         b1.setOnClickListener(new View.OnClickListener() {
@@ -76,10 +76,10 @@ public class SignUp extends AppCompatActivity {
     public void onLogInSuccess()
     {
         //after validate button Click Content
-        daoSession =((AppController)getApplication()).getDaoSession();
-=======
         daoSession =((PowerApplication)getApplication()).getDaoSession();
->>>>>>> ff2e693fbd59341b888013fdec4e066cbaff95e9
+
+        daoSession =((PowerApplication)getApplication()).getDaoSession();
+
         register=new Register();
         //String un=uname.getText().toString();
 
