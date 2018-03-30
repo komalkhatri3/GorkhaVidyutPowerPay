@@ -82,7 +82,7 @@ public class PutBillDetail extends AppCompatActivity {
         Date date = new Date();
         String d= dateFormat.format(date).toString();
         generateddate.setText(dateFormat.format(date));
-        DaoSession daoSession =((AppController)getApplication()).getDaoSession();
+        DaoSession daoSession =((PowerApplication)getApplication()).getDaoSession();
 
         Bill_details bill_details=new Bill_details();
 

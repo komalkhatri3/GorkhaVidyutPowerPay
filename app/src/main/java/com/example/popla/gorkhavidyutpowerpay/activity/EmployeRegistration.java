@@ -3,7 +3,6 @@ package com.example.popla.gorkhavidyutpowerpay.activity;
 import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.support.v4.app.FragmentActivity;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -65,13 +64,9 @@ public class EmployeRegistration extends FragmentActivity {
     }
     public void registerEmploye(View view)
     {
-<<<<<<< HEAD
-
         Toast.makeText(this,"Employe Registered",Toast.LENGTH_LONG).show();
         DaoSession daoSession =((PowerApplication)getApplication()).getDaoSession();
-=======
-        DaoSession daoSession =((AppController)getApplication()).getDaoSession();
->>>>>>> e9df6165dd9313aeca0f707bbfd067da72f9eef7
+
         Login login = new Login();
         Employee employees = new Employee();
         Register register = new Register();
