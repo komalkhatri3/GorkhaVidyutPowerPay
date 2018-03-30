@@ -7,11 +7,10 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 
-<<<<<<< HEAD
 import com.example.popla.gorkhavidyutpowerpay.PowerApplication;
-=======
->>>>>>> e9df6165dd9313aeca0f707bbfd067da72f9eef7
+
 import com.example.popla.gorkhavidyutpowerpay.R;
 
 public class Complaints extends AppCompatActivity {
@@ -113,8 +112,7 @@ public class Complaints extends AppCompatActivity {
         //orderAsc(BirthdayDao.Properties.DOB).list();
 
             }
-=======
     */
     }
->>>>>>> e9df6165dd9313aeca0f707bbfd067da72f9eef7
+
 }

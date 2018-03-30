@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ListView;
 
+import com.example.popla.gorkhavidyutpowerpay.PowerApplication;
 import com.example.popla.gorkhavidyutpowerpay.R;
 import com.example.popla.gorkhavidyutpowerpay.db.DaoSession;
 import com.example.popla.gorkhavidyutpowerpay.db.Employee;
@@ -46,7 +47,7 @@ public class ShowAllEmploye extends AppCompatActivity {
     }
     private void get_name_desig()
     {
-        DaoSession daoSession = ((AppController)getApplication()).getDaoSession();
+        DaoSession daoSession = ((PowerApplication)getApplication()).getDaoSession();
         List <Employee> list= daoSession.getEmployeeDao().loadAll();
         for(int i=0;i<list.size();i++)
         {

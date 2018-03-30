@@ -7,7 +7,7 @@ import android.support.v7.widget.RecyclerView;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.example.popla.gorkhavidyutpowerpay.AppController;
+import com.example.popla.gorkhavidyutpowerpay.PowerApplication;
 import com.example.popla.gorkhavidyutpowerpay.R;
 import com.example.popla.gorkhavidyutpowerpay.db.Bill_details;
 import com.example.popla.gorkhavidyutpowerpay.db.DaoSession;
@@ -36,7 +36,7 @@ public class BillDetailss extends AppCompatActivity {
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
         List<String> input = new ArrayList<>();
-        DaoSession daoSession = ((AppController)getApplication()).getDaoSession();
+        DaoSession daoSession = ((PowerApplication)getApplication()).getDaoSession();
 
         List <Bill_details> list= daoSession.getBill_detailsDao().loadAll();
 

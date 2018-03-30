@@ -95,13 +95,13 @@ public class Login extends AppCompatActivity {
       username=emailid.getText().toString().trim();
        password=pass.getText().toString().trim();
    }
-    Intent intent;
+
     public void LogIn(View view)
     {
         int count=0;
         if ((emailid.getText().toString().equals("1234"))&&(pass.getText().toString().equals("1234")))
         {
-            intent =new Intent(this, EmployeRegistration.class  );
+            Intent intent =new Intent(this, EmployeRegistration.class);
             startActivity(intent);
         }
         else if((emailid.getText().toString()) != null)
@@ -154,7 +154,7 @@ public class Login extends AppCompatActivity {
     }
     public void Add(View v)
     {
-        intent = new Intent(this,VerifierNewConnection.class);
+     Intent intent = new Intent(this,VerifierNewConnection.class);
         startActivity(intent);
     }
 }
