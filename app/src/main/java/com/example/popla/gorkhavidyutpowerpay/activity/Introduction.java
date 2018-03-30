@@ -25,7 +25,6 @@ public class Introduction extends AppCompatActivity {
 
     private ViewPagerAdapter viewPagerAdapter;
     private ViewPager viewPager;
-    private SharedPreferenceManager sharedPreferenceManager;
     private TextView[] dots;
     Button next, skip;
     private LinearLayout dotsLayout;
@@ -40,10 +39,9 @@ public class Introduction extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        sharedPreferenceManager = new SharedPreferenceManager(this);
-        if (sharedPreferenceManager.Check())
+
+        if (SharedPreferenceManager.getInstance(this).getBoolean(SharedPreferenceManager.isWalkThroughDone))
         {
-            sharedPreferenceManager.setFirst(false);
             Intent i = new Intent(Introduction.this,Login.class);
             startActivity(i);
             finish();
@@ -83,7 +81,7 @@ public class Introduction extends AppCompatActivity {
                 //int current= getitem(+1);
                 if(next.getText().toString().toLowerCase().equalsIgnoreCase("done"))
                 {
-
+                    SharedPreferenceManager.getInstance(getApplicationContext()).setBoolean(SharedPreferenceManager.isWalkThroughDone,true);
                     Intent i = new Intent(Introduction.this,Login.class);
                     startActivity(i);
                     finish();
