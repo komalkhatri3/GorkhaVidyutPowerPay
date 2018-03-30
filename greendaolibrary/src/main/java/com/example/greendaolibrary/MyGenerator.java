@@ -18,7 +18,7 @@ public class MyGenerator {
         }
     }
 
- ddTables(final Schema schema) {
+   private static void addTables(final Schema schema) {
         addUserEntities(schema);
        // addPhonesEntities(schema);
         addEmployeeEntities(schema);
