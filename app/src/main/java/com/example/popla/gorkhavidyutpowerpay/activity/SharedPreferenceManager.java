@@ -13,6 +13,7 @@ public class SharedPreferenceManager {
     SharedPreferences.Editor editor;
     Context context;
 
+    
     public SharedPreferenceManager(Context context)
     {
         this.context=context;
@@ -25,7 +26,7 @@ public class SharedPreferenceManager {
         editor.commit();
 
     }
-    public boolean Check()
+    public static boolean Check()
     {
         return pref.getBoolean("check",true);
     }

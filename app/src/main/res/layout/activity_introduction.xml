@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.popla.gorkhavidyutpowerpay.activity.Introduction">
+
     <android.support.v4.view.ViewPager
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -16,9 +17,8 @@
         android:layout_height="30dp"
         android:id="@+id/layoutData"
         android:layout_alignParentBottom="true"
-
         android:gravity="center"
-        android:orientation="horizontal">
+        android:orientation="horizontal"/>
         <!--
             <View
                 android:layout_width="match_parent"
@@ -28,6 +28,10 @@
                 android:background="@android:color/white"
                 android:layout_above="@id/layoutData"/>
             -->
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
         <Button
             android:layout_width="wrap_content"
             android:layout_height="30dp"
@@ -48,7 +52,7 @@
             android:text="SKIP"
             android:textColor="@android:color/white"
             />
-    </LinearLayout>
+    </RelativeLayout>
 
 
 </RelativeLayout>

@@ -13,7 +13,12 @@
         <activity android:name=".activity.Login">
 
         </activity>
-        <activity android:name=".activity.SignUp" />
+        <activity android:name=".activity.SignUp">
+            <intent-filter>
+                <action android:name="net.web44.jimappdev.thecoincollector.manageapps" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
         <activity android:name=".activity.EmployeRegistration" />
         <activity android:name=".activity.Employee_Data.ShowAllEmploye" />
         <activity android:name=".activity.Verifier.VerifierNewConnection" />
