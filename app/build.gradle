@@ -2,11 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 25
-<<<<<<< Updated upstream
-    buildToolsVersion '27.0.0'
-=======
     buildToolsVersion '25.0.0'
->>>>>>> Stashed changes
     defaultConfig {
         applicationId "com.narendra.myapplication"
         minSdkVersion 15

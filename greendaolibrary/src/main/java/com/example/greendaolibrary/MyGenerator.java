@@ -22,7 +22,6 @@ public class MyGenerator {
         addUserEntities(schema);
        // addPhonesEntities(schema);
         addEmployeeEntities(schema);
-        addRegisterEntities(schema);
         addNewConnectionEntities(schema);
         addComplaint_details(schema);
         addBill_detailsEntities(schema);
@@ -60,17 +59,7 @@ public class MyGenerator {
         employee.addStringProperty("emp_designation");
         return employee;
     }
-    private static Entity addRegisterEntities(final Schema schema) {
-        Entity register = schema.addEntity("Register");
-        register.addLongProperty("user_id").primaryKey().autoincrement();
-        register.addStringProperty("user_name");
-        register.addStringProperty("user_email");
-        register.addStringProperty("user_mobile");
-        register.addStringProperty("user_aadhar");
-        register.addStringProperty("user_password");
-        register.addStringProperty("user_kno");
-        return register;
-    }
+
     private static Entity addNewConnectionEntities(final Schema schema)
     {
         Entity new_connection=schema.addEntity("New_Connection");

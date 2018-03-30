@@ -14,12 +14,11 @@ import com.example.popla.gorkhavidyutpowerpay.PowerApplication;
 import com.example.popla.gorkhavidyutpowerpay.R;
 import com.example.popla.gorkhavidyutpowerpay.db.DaoSession;
 import com.example.popla.gorkhavidyutpowerpay.db.Register;
+import com.example.popla.gorkhavidyutpowerpay.manager.RegisterManager;
 
 public class SignUp extends AppCompatActivity {
 
     EditText uname,uemail,umobile,uaadhar,upassword,ukno,repassword;
-    DaoSession daoSession;
-    Register register;
     String n,e,p,a,pass,k,r;
     Button b1;
     @Override
@@ -76,11 +75,11 @@ public class SignUp extends AppCompatActivity {
     public void onLogInSuccess()
     {
         //after validate button Click Content
-        daoSession =((PowerApplication)getApplication()).getDaoSession();
+        //daoSession =((PowerApplication)getApplication()).getDaoSession();
 
-        daoSession =((PowerApplication)getApplication()).getDaoSession();
+        //daoSession =((PowerApplication)getApplication()).getDaoSession();
 
-        register=new Register();
+        Register register=new Register();
         //String un=uname.getText().toString();
 
         register.setUser_name(uname.getText().toString());
@@ -89,14 +88,9 @@ public class SignUp extends AppCompatActivity {
         register.setUser_aadhar(uaadhar.getText().toString());
         register.setUser_password(upassword.getText().toString());
         register.setUser_kno(ukno.getText().toString());
-        daoSession.getRegisterDao().insert(register);
+        RegisterManager.insertOrReplace(this,register);
 
-        /*uname.setText(null);
-        uemail.setText(null);
-        umobile.setText(null);
-        uaadhar.setText(null);
-        upassword.setText(null);
-        ukno.setText(null);*/
+
         Toast.makeText(this, "User Registered Successfully", Toast.LENGTH_SHORT).show();
 
     }

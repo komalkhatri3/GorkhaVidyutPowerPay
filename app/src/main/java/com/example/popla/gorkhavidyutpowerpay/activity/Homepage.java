@@ -125,11 +125,11 @@ public class Homepage extends AppCompatActivity
             startActivity(i1);
             // Handle the camera action
         } else if (id == R.id.paybill) {
-            Intent i2=new Intent(this, PayBill.class);
+            Intent i2=new Intent(this, PutBillDetail.class);
             startActivity(i2);
 
         } else if (id == R.id.complaints) {
-            Intent i3=new Intent(this, PutBillDetail.class);
+            Intent i3=new Intent(this, Complaints.class);
             startActivity(i3);
 
 

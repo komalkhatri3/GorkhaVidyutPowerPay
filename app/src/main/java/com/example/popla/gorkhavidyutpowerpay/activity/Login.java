@@ -13,17 +13,20 @@ import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 import com.example.popla.gorkhavidyutpowerpay.R;
+import com.example.popla.gorkhavidyutpowerpay.activity.ApproverP.Approver;
 import com.example.popla.gorkhavidyutpowerpay.activity.Verifier.VerifierNewConnection;
+import com.example.popla.gorkhavidyutpowerpay.manager.UserManager;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Login extends AppCompatActivity {
 
-     EditText emailid,pass;
+    EditText emailid,pass;
     CheckBox cb1;
 
     String username,password;
@@ -31,108 +34,67 @@ public class Login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-<<<<<<< Updated upstream
-        emailid =(EditText) findViewById(R.id.UserName) ;
-        final TextView textView=(TextView)findViewById(R.id.textView);
-       pass = (EditText)findViewById(R.id.password);
-       cb1=(CheckBox)findViewById(R.id.checkbox1);
-        login=(Button)findViewById(R.id.Login_button);
-        cb1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(!isChecked){
-                    pass.setTransformationMethod(PasswordTransformationMethod.getInstance());
-                }
-                else
-                    pass.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
-            }
-        });
 
-        // insertDataIntoDb();
-        //getUserDATA();
-    login.setOnClickListener(new View.OnClickListener()
-        {
-            public void onClick(View v)
-            {
+        emailid = (EditText) findViewById(R.id.UserName);
+        final TextView textView = (TextView) findViewById(R.id.textView);
+        pass = (EditText) findViewById(R.id.password);
+        cb1 = (CheckBox) findViewById(R.id.checkbox1);
+        Button login = (Button)findViewById(R.id.Login_button);
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
                 register();
             }
         });
-=======
-        emailid = (EditText) findViewById(R.id.UserName);
-        TextView textView = (TextView) findViewById(R.id.textView);
-        pass = (EditText) findViewById(R.id.password);
-        cb1 = (CheckBox) findViewById(R.id.checkbox1);
-
         cb1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (!isChecked) {
                     pass.setTransformationMethod(PasswordTransformationMethod.getInstance());
-                } else
+                } else {
                     pass.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                }
             }
         });
+
     }
 
-   /* private void getUserDATA() {
-        DaoSession daoSession = ((AppController) getApplication()).getDaoSession();
-        List<User> list = daoSession.getUserDao().loadAll();
-        Log.i("RESULT", list.get(0).getEmail());
-        Toast.makeText(this,  list.get(0).getEmail().toString(),Toast.LENGTH_LONG).show();
->>>>>>> Stashed changes
-    }
-    public void register()
-    {
+    public void register(){
         intialize();
-        if(!validate())
-        {
-
-<<<<<<< Updated upstream
-        }
-        else
-        {
+        if(validate()){
             onLogInSuccess();
+        } else {
+            Toast.makeText(this,"Please enter correct details",Toast.LENGTH_SHORT).show();
         }
-
-    }
-    public void onLogInSuccess()
-=======
-    private void insertDataIntoDb() {
-        DaoSession daoSession = ((AppController) getApplication()).getDaoSession();
-        User user=new User();
-        user.setEmail("dfkjdhkjds");
-        user.setFirst_name("dfjkdfhkdf");
-        user.setLast_name("dfjkdfhkdf");
-        user.setUser_id(101);
-        daoSession.getUserDao().insert(user);
     }
 
-   public void register()
-   {
-       intialize();
-       if(!validate())
-       {
 
-       }
-
-   }
-   */
    public  void intialize() {
        username = emailid.getText().toString().trim();
        password = pass.getText().toString().trim();
    }
 
-    public void LogIn(View view)
->>>>>>> Stashed changes
-    {
+
+
+    public void onLogInSuccess() {
         //after validate button Click Content
-        Intent intent;  int count=0;
-        if ((emailid.getText().toString().equals("ab@gmail.com"))&&(pass.getText().toString().equals("1234")))
-        {
-            intent =new Intent(this,AddNewConnection.class  );
+        if(UserManager.getUserByEmailPassword(this,username,password) != null){
+            Intent intent = new Intent(this, Homepage.class);
             startActivity(intent);
+        } else {
+            Toast.makeText(this,"Please Register!!",Toast.LENGTH_SHORT).show();
         }
-        else if((emailid.getText().toString()) != null) {
+
+        /*if ((emailid.getText().toString().equals("ab@gmail.com")) && (pass.getText().toString().equals("1234"))) {
+            intent = new Intent(this, Homepage.class);
+            startActivity(intent);
+        } else if ((emailid.getText().toString().equals("ac@gmail.com")) && (pass.getText().toString().equals("1234"))) {
+            intent = new Intent(this, VerifierNewConnection.class);
+            startActivity(intent);
+        } else if ((emailid.getText().toString().equals("ad@gmail.com")) && (pass.getText().toString().equals("1234"))) {
+            intent = new Intent(this, Approver.class);
+            startActivity(intent);
+        } else if ((emailid.getText().toString()) != null) {
             ListView listView;
             List<String> eid;
             List<String> pass;
@@ -140,24 +102,18 @@ public class Login extends AppCompatActivity {
             eid = new ArrayList<String>();
             pass = new ArrayList<String>();
 
-        }
-    }
-    public void intialize()
-    {
-        username=emailid.getText().toString().trim();
-        password=pass.getText().toString().trim();
+        }*/
     }
 
     public boolean validate() {
-        boolean valid=true;
-        if(username.isEmpty()||!Patterns.EMAIL_ADDRESS.matcher(username).matches()){
+        boolean valid = true;
+        if (username.isEmpty() || !Patterns.EMAIL_ADDRESS.matcher(username).matches()) {
             emailid.setError("Please Enter Valid Email Id");
-            valid=false;
+            valid = false;
         }
-        if (password.isEmpty()||pass.length()>32)
-        {
+        if (password.isEmpty() || pass.length() > 32) {
             pass.setError("Please Enter Password");
-            valid=false;
+            valid = false;
         }
         return valid;
     }

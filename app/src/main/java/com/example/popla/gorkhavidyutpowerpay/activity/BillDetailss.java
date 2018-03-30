@@ -45,7 +45,6 @@ public class BillDetailss extends AppCompatActivity {
         for (int i = 0; i < list.size(); i++) {
 
             input.add(list.get(i).getK_no());
-            input.add(list.get(i).getPrevious_read());
             input.add(list.get(i).getCurrent_read());
 
 

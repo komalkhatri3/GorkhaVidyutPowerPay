@@ -16,11 +16,10 @@ public class Bill_details {
     @Id(autoincrement = true)
     private Long Bill_id;
     private String k_no;
-    private String previous_read;
     private String current_read;
     private java.util.Date generated_date;
+    private String due_date;
     private String paid_by;
-    private String receipt_no;
 
     // KEEP FIELDS - put your custom fields here
     // KEEP FIELDS END
@@ -34,14 +33,13 @@ public class Bill_details {
     }
 
     @Generated
-    public Bill_details(Long Bill_id, String k_no, String previous_read, String current_read, java.util.Date generated_date, String paid_by, String receipt_no) {
+    public Bill_details(Long Bill_id, String k_no, String current_read, java.util.Date generated_date, String due_date, String paid_by) {
         this.Bill_id = Bill_id;
         this.k_no = k_no;
-        this.previous_read = previous_read;
         this.current_read = current_read;
         this.generated_date = generated_date;
+        this.due_date = due_date;
         this.paid_by = paid_by;
-        this.receipt_no = receipt_no;
     }
 
     public Long getBill_id() {
@@ -60,14 +58,6 @@ public class Bill_details {
         this.k_no = k_no;
     }
 
-    public String getPrevious_read() {
-        return previous_read;
-    }
-
-    public void setPrevious_read(String previous_read) {
-        this.previous_read = previous_read;
-    }
-
     public String getCurrent_read() {
         return current_read;
     }
@@ -84,6 +74,14 @@ public class Bill_details {
         this.generated_date = generated_date;
     }
 
+    public String getDue_date() {
+        return due_date;
+    }
+
+    public void setDue_date(String due_date) {
+        this.due_date = due_date;
+    }
+
     public String getPaid_by() {
         return paid_by;
     }
@@ -91,24 +89,6 @@ public class Bill_details {
     public void setPaid_by(String paid_by) {
         this.paid_by = paid_by;
     }
-
-    public String getReceipt_no() {
-        return receipt_no;
-    }
-
-    public void setReceipt_no(String receipt_no) {
-        this.receipt_no = receipt_no;
-    }
-
-    /*public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }*/
-
-
 
     // KEEP METHODS - put your custom methods here
     // KEEP METHODS END

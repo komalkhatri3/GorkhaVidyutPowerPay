@@ -10,14 +10,12 @@ import org.greenrobot.greendao.internal.DaoConfig;
 
 import com.example.popla.gorkhavidyutpowerpay.db.User;
 import com.example.popla.gorkhavidyutpowerpay.db.Employee;
-import com.example.popla.gorkhavidyutpowerpay.db.Register;
 import com.example.popla.gorkhavidyutpowerpay.db.New_Connection;
 import com.example.popla.gorkhavidyutpowerpay.db.Complaint_Details;
 import com.example.popla.gorkhavidyutpowerpay.db.Bill_details;
 
 import com.example.popla.gorkhavidyutpowerpay.db.UserDao;
 import com.example.popla.gorkhavidyutpowerpay.db.EmployeeDao;
-import com.example.popla.gorkhavidyutpowerpay.db.RegisterDao;
 import com.example.popla.gorkhavidyutpowerpay.db.New_ConnectionDao;
 import com.example.popla.gorkhavidyutpowerpay.db.Complaint_DetailsDao;
 import com.example.popla.gorkhavidyutpowerpay.db.Bill_detailsDao;
@@ -33,14 +31,12 @@ public class DaoSession extends AbstractDaoSession {
 
     private final DaoConfig userDaoConfig;
     private final DaoConfig employeeDaoConfig;
-    private final DaoConfig registerDaoConfig;
     private final DaoConfig new_ConnectionDaoConfig;
     private final DaoConfig complaint_DetailsDaoConfig;
     private final DaoConfig bill_detailsDaoConfig;
 
     private final UserDao userDao;
     private final EmployeeDao employeeDao;
-    private final RegisterDao registerDao;
     private final New_ConnectionDao new_ConnectionDao;
     private final Complaint_DetailsDao complaint_DetailsDao;
     private final Bill_detailsDao bill_detailsDao;
@@ -55,9 +51,6 @@ public class DaoSession extends AbstractDaoSession {
         employeeDaoConfig = daoConfigMap.get(EmployeeDao.class).clone();
         employeeDaoConfig.initIdentityScope(type);
 
-        registerDaoConfig = daoConfigMap.get(RegisterDao.class).clone();
-        registerDaoConfig.initIdentityScope(type);
-
         new_ConnectionDaoConfig = daoConfigMap.get(New_ConnectionDao.class).clone();
         new_ConnectionDaoConfig.initIdentityScope(type);
 
@@ -69,14 +62,12 @@ public class DaoSession extends AbstractDaoSession {
 
         userDao = new UserDao(userDaoConfig, this);
         employeeDao = new EmployeeDao(employeeDaoConfig, this);
-        registerDao = new RegisterDao(registerDaoConfig, this);
         new_ConnectionDao = new New_ConnectionDao(new_ConnectionDaoConfig, this);
         complaint_DetailsDao = new Complaint_DetailsDao(complaint_DetailsDaoConfig, this);
         bill_detailsDao = new Bill_detailsDao(bill_detailsDaoConfig, this);
 
         registerDao(User.class, userDao);
         registerDao(Employee.class, employeeDao);
-        registerDao(Register.class, registerDao);
         registerDao(New_Connection.class, new_ConnectionDao);
         registerDao(Complaint_Details.class, complaint_DetailsDao);
         registerDao(Bill_details.class, bill_detailsDao);
@@ -85,7 +76,6 @@ public class DaoSession extends AbstractDaoSession {
     public void clear() {
         userDaoConfig.clearIdentityScope();
         employeeDaoConfig.clearIdentityScope();
-        registerDaoConfig.clearIdentityScope();
         new_ConnectionDaoConfig.clearIdentityScope();
         complaint_DetailsDaoConfig.clearIdentityScope();
         bill_detailsDaoConfig.clearIdentityScope();
@@ -97,10 +87,6 @@ public class DaoSession extends AbstractDaoSession {
 
     public EmployeeDao getEmployeeDao() {
         return employeeDao;
-    }
-
-    public RegisterDao getRegisterDao() {
-        return registerDao;
     }
 
     public New_ConnectionDao getNew_ConnectionDao() {
