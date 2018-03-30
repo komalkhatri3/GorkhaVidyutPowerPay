@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.popla.gorkhavidyutpowerpay.AppController;
+import com.example.popla.gorkhavidyutpowerpay.PowerApplication;
 import com.example.popla.gorkhavidyutpowerpay.R;
 import com.example.popla.gorkhavidyutpowerpay.db.DaoSession;
 import com.example.popla.gorkhavidyutpowerpay.db.Register;
@@ -33,7 +33,7 @@ public class SignUp extends AppCompatActivity {
         uaadhar = (EditText)findViewById(R.id.edit4);
         upassword = (EditText)findViewById(R.id.edit5);
         ukno = (EditText)findViewById(R.id.edit7);
-        daoSession =((AppController)getApplication()).getDaoSession();
+        daoSession =((PowerApplication)getApplication()).getDaoSession();
         register=new Register();
         //String un=uname.getText().toString();
 
@@ -56,7 +56,7 @@ public class SignUp extends AppCompatActivity {
 
     public void show(View v)
     {
-        daoSession = ((AppController)getApplication()).getDaoSession();
+        daoSession = ((PowerApplication)getApplication()).getDaoSession();
 
     }
 }

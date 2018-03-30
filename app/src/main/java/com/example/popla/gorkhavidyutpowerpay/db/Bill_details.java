@@ -110,6 +110,7 @@ public class Bill_details {
         this.status = status;
     }
 
+
     // KEEP METHODS - put your custom methods here
     // KEEP METHODS END
 
