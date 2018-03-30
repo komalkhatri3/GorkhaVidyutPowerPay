@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.popla.gorkhavidyutpowerpay.AppController;
+import com.example.popla.gorkhavidyutpowerpay.PowerApplication;
 import com.example.popla.gorkhavidyutpowerpay.R;
 import com.example.popla.gorkhavidyutpowerpay.db.DaoSession;
 import com.example.popla.gorkhavidyutpowerpay.db.Register;
@@ -32,6 +32,7 @@ public class SignUp extends AppCompatActivity {
         uaadhar = (EditText)findViewById(R.id.edit4);
         upassword = (EditText)findViewById(R.id.edit5);
         ukno = (EditText)findViewById(R.id.edit7);
+<<<<<<< HEAD
         repassword=(EditText)findViewById(R.id.edit6);
         b1=(Button)findViewById(R.id.signup);
         b1.setOnClickListener(new View.OnClickListener() {
@@ -76,6 +77,9 @@ public class SignUp extends AppCompatActivity {
     {
         //after validate button Click Content
         daoSession =((AppController)getApplication()).getDaoSession();
+=======
+        daoSession =((PowerApplication)getApplication()).getDaoSession();
+>>>>>>> ff2e693fbd59341b888013fdec4e066cbaff95e9
         register=new Register();
         //String un=uname.getText().toString();
 
@@ -174,7 +178,7 @@ public class SignUp extends AppCompatActivity {
 /*
     public void show(View v)
     {
-        daoSession = ((AppController)getApplication()).getDaoSession();
+        daoSession = ((PowerApplication)getApplication()).getDaoSession();
 
     }*/
 }

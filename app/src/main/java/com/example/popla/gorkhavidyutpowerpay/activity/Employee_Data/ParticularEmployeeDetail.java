@@ -8,7 +8,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.popla.gorkhavidyutpowerpay.AppController;
+import com.example.popla.gorkhavidyutpowerpay.PowerApplication;
 import com.example.popla.gorkhavidyutpowerpay.R;
 import com.example.popla.gorkhavidyutpowerpay.db.DaoSession;
 import com.example.popla.gorkhavidyutpowerpay.db.Employee;
@@ -38,7 +38,7 @@ public class ParticularEmployeeDetail extends AppCompatActivity {
         editmobile = (EditText)findViewById(R.id.edit_mobile);
         editage = (EditText)findViewById(R.id.edit_age);
         editdesig = (EditText)findViewById(R.id.edit_desig);
-        daoSession = ((AppController)getApplication()).getDaoSession();
+        daoSession = ((PowerApplication)getApplication()).getDaoSession();
         List<Employee> list = daoSession.getEmployeeDao().loadAll();
 
         for(int i=0 ; i<list.size();i++)

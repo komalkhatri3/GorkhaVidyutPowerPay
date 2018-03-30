@@ -9,6 +9,8 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.example.popla.gorkhavidyutpowerpay.PowerApplication;
+
 import com.example.popla.gorkhavidyutpowerpay.R;
 
 public class Complaints extends AppCompatActivity {
@@ -96,7 +98,7 @@ public class Complaints extends AppCompatActivity {
         SimpleDateFormat mdformat = new SimpleDateFormat("dd / MM / YYYY ");
         String strDate = "Current Date : " + mdformat.format(calendar.getTime());
         //Toast.makeText(this,"Employe Registered",Toast.LENGTH_LONG).show();
-        DaoSession daoSession =((AppController)getApplication()).getDaoSession();
+        DaoSession daoSession =((PowerApplication)getApplication()).getDaoSession();
         other.setText(strDate);
         Complaint_Details complaint_details = new Complaint_Details();
         //employees.setEmp_id(1l);
@@ -106,6 +108,11 @@ public class Complaints extends AppCompatActivity {
         complaint_details.setComp_Msg("");
         complaint_details.setComp_Status("");
         daoSession.getComplaint_DetailsDao().insert(complaint_details);
+<<<<<<< HEAD
+        //orderAsc(BirthdayDao.Properties.DOB).list();
+
+            }
     */
     }
+
 }

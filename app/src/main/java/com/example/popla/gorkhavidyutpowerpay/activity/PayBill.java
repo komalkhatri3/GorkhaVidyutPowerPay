@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ListView;
 
-import com.example.popla.gorkhavidyutpowerpay.AppController;
+import com.example.popla.gorkhavidyutpowerpay.PowerApplication;
 import com.example.popla.gorkhavidyutpowerpay.R;
 import com.example.popla.gorkhavidyutpowerpay.db.Bill_details;
 import com.example.popla.gorkhavidyutpowerpay.db.DaoSession;
@@ -43,7 +43,7 @@ public class PayBill extends AppCompatActivity {
         Bill_details bill_details=new Bill_details();
         K_NO = (EditText)findViewById(R.id.k_no);
         ListView listView;
-        DaoSession daoSession = ((AppController)getApplication()).getDaoSession();
+        DaoSession daoSession = ((PowerApplication)getApplication()).getDaoSession();
         List <Bill_details> list= daoSession.getBill_detailsDao().loadAll();
         for(int i=0;i<list.size();i++)
         {

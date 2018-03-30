@@ -1,21 +1,16 @@
 package com.example.popla.gorkhavidyutpowerpay.activity;
 
 import android.app.DatePickerDialog;
-import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import com.example.popla.gorkhavidyutpowerpay.AppController;
-import com.example.popla.gorkhavidyutpowerpay.DateSettings;
-import com.example.popla.gorkhavidyutpowerpay.PickerDialogs;
+import com.example.popla.gorkhavidyutpowerpay.PowerApplication;
 import com.example.popla.gorkhavidyutpowerpay.R;
 import com.example.popla.gorkhavidyutpowerpay.db.DaoSession;
 import com.example.popla.gorkhavidyutpowerpay.db.New_Connection;
@@ -87,7 +82,7 @@ public class AddNewConnection extends FragmentActivity{
     {
 
 
-        DaoSession daoSession =((AppController)getApplication()).getDaoSession();
+        DaoSession daoSession =((PowerApplication)getApplication()).getDaoSession();
         New_Connection new_connection=new New_Connection();
         new_connection.setApplicant_name(name.getText().toString());
         new_connection.setApplicant_fname(fname.getText().toString());

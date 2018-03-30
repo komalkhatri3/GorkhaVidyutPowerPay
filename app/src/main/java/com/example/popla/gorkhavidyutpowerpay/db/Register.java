@@ -44,6 +44,19 @@ public class Register {
         this.user_kno = user_kno;
     }
 
+    //keep
+    @Generated
+    public Register(String user_name, String user_email, String user_mobile, String user_aadhar, String user_password, String user_kno) {
+        this.user_name = user_name;
+        this.user_email = user_email;
+        this.user_mobile = user_mobile;
+        this.user_aadhar = user_aadhar;
+        this.user_password = user_password;
+        this.user_kno = user_kno;
+    }
+    //keep
+
+
     public Long getUser_id() {
         return user_id;
     }

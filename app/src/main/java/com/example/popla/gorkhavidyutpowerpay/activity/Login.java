@@ -15,6 +15,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.popla.gorkhavidyutpowerpay.R;
+import com.example.popla.gorkhavidyutpowerpay.activity.Verifier.VerifierNewConnection;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -133,13 +134,20 @@ public class Login extends AppCompatActivity {
 
    }
    */
+
   /*Intent intent;
+=======
+   public  void intialize()
+   {
+      username=emailid.getText().toString().trim();
+       password=pass.getText().toString().trim();
+   }
     public void LogIn(View view)
     {
         int count=0;
         if ((emailid.getText().toString().equals("1234"))&&(pass.getText().toString().equals("1234")))
         {
-            intent =new Intent(this, EmployeRegistration.class  );
+            Intent intent =new Intent(this, EmployeRegistration.class);
             startActivity(intent);
         }
         else if((emailid.getText().toString()) != null)
@@ -192,7 +200,7 @@ public class Login extends AppCompatActivity {
     }
     public void Add(View v)
     {
-        intent = new Intent(this,AddNewConnection.class);
+     Intent intent = new Intent(this,VerifierNewConnection.class);
         startActivity(intent);
     }*/
 }
