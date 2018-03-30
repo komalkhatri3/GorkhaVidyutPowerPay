@@ -2,6 +2,7 @@ package com.example.popla.gorkhavidyutpowerpay.activity;
 
 import android.app.DatePickerDialog;
 import android.content.Intent;
+import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -20,7 +21,7 @@ import com.example.popla.gorkhavidyutpowerpay.db.Register;
 
 import java.util.Calendar;
 
-public class EmployeRegistration extends AppCompatActivity {
+public class EmployeRegistration extends FragmentActivity {
 
     Spinner spinner ;
     DatePickerDialog datePickerDialog;
@@ -64,9 +65,13 @@ public class EmployeRegistration extends AppCompatActivity {
     }
     public void registerEmploye(View view)
     {
+<<<<<<< HEAD
 
         Toast.makeText(this,"Employe Registered",Toast.LENGTH_LONG).show();
         DaoSession daoSession =((PowerApplication)getApplication()).getDaoSession();
+=======
+        DaoSession daoSession =((AppController)getApplication()).getDaoSession();
+>>>>>>> e9df6165dd9313aeca0f707bbfd067da72f9eef7
         Login login = new Login();
         Employee employees = new Employee();
         Register register = new Register();
@@ -77,9 +82,10 @@ public class EmployeRegistration extends AppCompatActivity {
         employees.setEmp_name(ename.getText().toString());
         employees.setEmp_email_id(emailid.getText().toString());
         employees.setEmp_mobile(emobile.getText().toString());
-        employees.setEmp_age(edd.getText().toString()+emm.getText().toString()+eyyyy.getText().toString());
+        employees.setEmp_age(edd.getText().toString());
         employees.setEmp_designation(edesig.getSelectedItem().toString());
         daoSession.getEmployeeDao().insert(employees);
+        Toast.makeText(this,"Employe Registered",Toast.LENGTH_LONG).show();
 
     }
     public void viewAllEmploye(View view)

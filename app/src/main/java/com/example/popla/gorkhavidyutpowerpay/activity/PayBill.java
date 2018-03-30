@@ -1,7 +1,7 @@
 package com.example.popla.gorkhavidyutpowerpay.activity;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -47,7 +47,7 @@ public class PayBill extends AppCompatActivity {
         List <Bill_details> list= daoSession.getBill_detailsDao().loadAll();
         for(int i=0;i<list.size();i++)
         {
-            if((list.get(i).getK_no().equals(K_NO.getText().toString())) && (list.get(i).getStatus())=="not_paid")
+            if((list.get(i).getK_no().equals(K_NO.getText().toString())) && (list.get(i).getPaid_by())== null)
             {
                 kno.add(list.get(i).getK_no());
                 name.add(list.get(i).getK_no());

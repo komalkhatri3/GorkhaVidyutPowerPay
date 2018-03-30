@@ -134,8 +134,12 @@ public class Homepage extends AppCompatActivity
 
 
         } else if (id == R.id.notification) {
+            Intent i4=new Intent(this, Notifications.class);
+            startActivity(i4);
 
         } else if (id == R.id.setting) {
+            Intent i5=new Intent(this, BillDetailss.class);
+            startActivity(i5);
 
         } else if (id == R.id.help) {
 

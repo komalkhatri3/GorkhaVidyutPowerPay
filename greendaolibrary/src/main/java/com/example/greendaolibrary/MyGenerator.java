@@ -100,7 +100,7 @@ public class MyGenerator {
         billdetails.addDateProperty("generated_date");
         billdetails.addStringProperty("paid_by");
         billdetails.addStringProperty("receipt_no");
-        billdetails.addStringProperty("status");
+
 
         return billdetails;
     }

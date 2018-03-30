@@ -25,7 +25,6 @@ public class SignUp extends AppCompatActivity {
     public void signup(View view)
     {
 
-        Toast.makeText(this, uname.getText(), Toast.LENGTH_SHORT).show();
 
         uname = (EditText)findViewById(R.id.edit1);
         uemail = (EditText)findViewById(R.id.edit2);
@@ -52,6 +51,8 @@ public class SignUp extends AppCompatActivity {
         upassword.setText(null);
         ukno.setText(null);*/
         Toast.makeText(this, "User Registered Successfully", Toast.LENGTH_SHORT).show();
+
+
     }
 
     public void show(View v)

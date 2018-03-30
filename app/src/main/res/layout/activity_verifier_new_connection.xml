@@ -11,4 +11,9 @@
             android:layout_height="wrap_content"
             android:id="@+id/List_view_verify"></ListView>
 
+<<<<<<< HEAD
 </RelativeLayout>
+=======
+
+</RelativeLayout>
+>>>>>>> e9df6165dd9313aeca0f707bbfd067da72f9eef7

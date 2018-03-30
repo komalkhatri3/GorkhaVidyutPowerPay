@@ -21,7 +21,6 @@ public class Bill_details {
     private java.util.Date generated_date;
     private String paid_by;
     private String receipt_no;
-    private String status;
 
     // KEEP FIELDS - put your custom fields here
     // KEEP FIELDS END
@@ -35,7 +34,7 @@ public class Bill_details {
     }
 
     @Generated
-    public Bill_details(Long Bill_id, String k_no, String previous_read, String current_read, java.util.Date generated_date, String paid_by, String receipt_no, String status) {
+    public Bill_details(Long Bill_id, String k_no, String previous_read, String current_read, java.util.Date generated_date, String paid_by, String receipt_no) {
         this.Bill_id = Bill_id;
         this.k_no = k_no;
         this.previous_read = previous_read;
@@ -43,7 +42,6 @@ public class Bill_details {
         this.generated_date = generated_date;
         this.paid_by = paid_by;
         this.receipt_no = receipt_no;
-        this.status = status;
     }
 
     public Long getBill_id() {
@@ -102,6 +100,7 @@ public class Bill_details {
         this.receipt_no = receipt_no;
     }
 
+<<<<<<< HEAD
     public String getStatus() {
         return status;
     }
@@ -111,6 +110,8 @@ public class Bill_details {
     }
 
 
+=======
+>>>>>>> e9df6165dd9313aeca0f707bbfd067da72f9eef7
     // KEEP METHODS - put your custom methods here
     // KEEP METHODS END
 
