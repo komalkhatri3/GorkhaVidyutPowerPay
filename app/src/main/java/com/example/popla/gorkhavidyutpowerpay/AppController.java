@@ -12,7 +12,7 @@ import org.greenrobot.greendao.database.Database;
  * Created by Akinsete on 1/14/16.
  */
 
-public class AppController extends Application {
+public class    AppController extends Application {
 
     public static final boolean ENCRYPTED = true;
     private DaoSession daoSession;
