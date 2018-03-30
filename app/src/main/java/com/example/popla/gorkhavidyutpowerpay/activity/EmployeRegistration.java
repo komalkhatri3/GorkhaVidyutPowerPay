@@ -12,7 +12,7 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import com.example.popla.gorkhavidyutpowerpay.AppController;
+import com.example.popla.gorkhavidyutpowerpay.PowerApplication;
 import com.example.popla.gorkhavidyutpowerpay.R;
 import com.example.popla.gorkhavidyutpowerpay.activity.Employee_Data.ShowAllEmploye;
 import com.example.popla.gorkhavidyutpowerpay.db.DaoSession;
@@ -65,7 +65,13 @@ public class EmployeRegistration extends FragmentActivity {
     }
     public void registerEmploye(View view)
     {
+<<<<<<< HEAD
+
+        Toast.makeText(this,"Employe Registered",Toast.LENGTH_LONG).show();
+        DaoSession daoSession =((PowerApplication)getApplication()).getDaoSession();
+=======
         DaoSession daoSession =((AppController)getApplication()).getDaoSession();
+>>>>>>> e9df6165dd9313aeca0f707bbfd067da72f9eef7
         Login login = new Login();
         Employee employees = new Employee();
         Register register = new Register();

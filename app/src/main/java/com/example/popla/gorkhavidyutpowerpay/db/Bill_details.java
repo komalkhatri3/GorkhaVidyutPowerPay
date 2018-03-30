@@ -100,6 +100,18 @@ public class Bill_details {
         this.receipt_no = receipt_no;
     }
 
+<<<<<<< HEAD
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+
+=======
+>>>>>>> e9df6165dd9313aeca0f707bbfd067da72f9eef7
     // KEEP METHODS - put your custom methods here
     // KEEP METHODS END
 
