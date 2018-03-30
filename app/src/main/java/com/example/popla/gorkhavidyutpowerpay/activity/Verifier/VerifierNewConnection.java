@@ -3,9 +3,7 @@ package com.example.popla.gorkhavidyutpowerpay.activity.Verifier;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ListView;
-import android.widget.Toast;
 
-import com.example.popla.gorkhavidyutpowerpay.AppController;
 import com.example.popla.gorkhavidyutpowerpay.R;
 import com.example.popla.gorkhavidyutpowerpay.db.DaoSession;
 import com.example.popla.gorkhavidyutpowerpay.db.New_Connection;
@@ -33,7 +31,7 @@ public class VerifierNewConnection extends AppCompatActivity {
         adapter = new VerifierAdapter(getApplicationContext(),R.layout.verifier_layout);
         listView.setAdapter(adapter);
 
-        for(int i=0;i<app_id.size();i++)
+        for(int i=0;i<app_name.size();i++)
         {
             VerifierDataProvider dataProvider = new VerifierDataProvider(app_id.get(i),app_name.get(i),app_area.get(i));
             adapter.add(dataProvider);

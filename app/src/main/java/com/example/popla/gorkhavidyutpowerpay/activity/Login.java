@@ -14,6 +14,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.popla.gorkhavidyutpowerpay.R;
+import com.example.popla.gorkhavidyutpowerpay.activity.Verifier.VerifierNewConnection;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -153,7 +154,7 @@ public class Login extends AppCompatActivity {
     }
     public void Add(View v)
     {
-        intent = new Intent(this,AddNewConnection.class);
+        intent = new Intent(this,VerifierNewConnection.class);
         startActivity(intent);
     }
 }

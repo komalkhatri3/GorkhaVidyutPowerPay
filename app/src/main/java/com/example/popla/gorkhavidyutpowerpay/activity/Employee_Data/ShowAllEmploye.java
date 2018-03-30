@@ -2,14 +2,9 @@ package com.example.popla.gorkhavidyutpowerpay.activity.Employee_Data;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.ListView;
-import android.widget.Toast;
 
-import com.example.popla.gorkhavidyutpowerpay.AppController;
 import com.example.popla.gorkhavidyutpowerpay.R;
-import com.example.popla.gorkhavidyutpowerpay.activity.Employee_Data.EmployeeAdapter;
-import com.example.popla.gorkhavidyutpowerpay.activity.Employee_Data.EmployeeDataProvider;
 import com.example.popla.gorkhavidyutpowerpay.db.DaoSession;
 import com.example.popla.gorkhavidyutpowerpay.db.Employee;
 
