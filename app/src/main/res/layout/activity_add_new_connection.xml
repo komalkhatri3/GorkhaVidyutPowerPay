@@ -4,99 +4,222 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/leaf"
     tools:context="com.example.popla.gorkhavidyutpowerpay.activity.AddNewConnection">
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp"
-        android:paddingTop="30dp">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="16dp"
+        android:id="@+id/linearLayout2"
+        >
+        <TextView
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add New Connection"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            />
+        <android.support.design.widget.TextInputLayout
 
-        <EditText
+            android:id="@+id/testingInputLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:theme="@style/Theme.AppCompat"
+            android:layout_marginTop="30dp"
+            app:passwordToggleEnabled="true"
+            >
+        <android.support.design.widget.TextInputEditText
             android:id="@+id/Add_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
-            android:layout_marginTop="20dp"
-            android:hint="Name Of Applicant"
+            android:drawablePadding="12dp"
+            android:padding="8dp"
+            android:background="#6ef4f4f4"
+            android:hint="Applicant Name"
+            android:textColorHint="#000000"
+            android:textStyle="bold"
             android:layout_weight="0.86" />
-
-        <EditText
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/testingInputLayout4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:theme="@style/Theme.AppCompat"
+            app:passwordToggleEnabled="true">
+        <android.support.design.widget.TextInputEditText
             android:id="@+id/Add_fathern"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
+
             android:layout_marginRight="16dp"
             android:layout_marginTop="20dp"
+            android:drawablePadding="12dp"
+            android:padding="8dp"
+            android:background="#6ef4f4f4"
             android:hint="Father Name or Husband Name"
-            android:layout_below="@+id/Add_name"/>
-
-        <EditText
+            />
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/testingInputLayout5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:theme="@style/Theme.AppCompat"
+            app:passwordToggleEnabled="true">
+        <android.support.design.widget.TextInputEditText
             android:id="@+id/edit12"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/Add_fathern"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="20dp"
             android:layout_marginRight="16dp"
+            android:drawablePadding="12dp"
+            android:padding="8dp"
+            android:background="#6ef4f4f4"
             android:hint="Date Of Birth"/>
-        <EditText
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/testingInputLayout6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:theme="@style/Theme.AppCompat"
+            app:passwordToggleEnabled="true">
+        <android.support.design.widget.TextInputEditText
             android:id="@+id/Add_occupation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:layout_marginTop="20dp"
-            android:layout_below="@id/edit12"
+
+            android:drawablePadding="12dp"
+            android:padding="8dp"
+            android:background="#6ef4f4f4"
             android:hint="Occupation"/>
+        </android.support.design.widget.TextInputLayout>
         <TextView
             android:id="@+id/Address"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Address (Where Connection Is Required"
-            android:layout_below="@id/Add_occupation"
+            android:text="Address (Where Connection Is Required)"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:layout_marginTop="20dp"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
-        <EditText
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/testingInputLayout7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:theme="@style/Theme.AppCompat"
+            app:passwordToggleEnabled="true">
+        <android.support.design.widget.TextInputEditText
             android:id="@+id/Add_area"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:layout_marginTop="20dp"
-            android:layout_below="@id/Address"
-            android:hint="Area"/>
-        <EditText
+            android:hint="Area"
+            android:drawablePadding="12dp"
+            android:padding="8dp"
+            android:background="#6ef4f4f4"/>
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/testingInputLayout8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:theme="@style/Theme.AppCompat"
+            app:passwordToggleEnabled="true">
+        <android.support.design.widget.TextInputEditText
             android:id="@+id/Add_landmark"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:layout_marginTop="20dp"
-            android:layout_below="@+id/Add_area"
-            android:hint="Landmark"/>
-        <EditText
+            android:hint="Landmark"
+            android:drawablePadding="12dp"
+            android:padding="8dp"
+            android:background="#6ef4f4f4"/>
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/testingInputLayout9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:theme="@style/Theme.AppCompat"
+            app:passwordToggleEnabled="true">
+        <android.support.design.widget.TextInputEditText
             android:id="@+id/Add_city"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:layout_marginTop="20dp"
-            android:layout_below="@id/Add_landmark"
-            android:hint="City"/>
-        <EditText
+            android:hint="City"
+            android:drawablePadding="12dp"
+            android:padding="8dp"
+            android:background="#6ef4f4f4"/>
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/testingInputLayout10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:theme="@style/Theme.AppCompat"
+            app:passwordToggleEnabled="true">
+        <android.support.design.widget.TextInputEditText
             android:id="@+id/Add_pincode"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:layout_marginTop="20dp"
-            android:layout_below="@id/Add_city"
-            android:hint="Pincode"/>
-        <EditText
+            android:hint="Pincode"
+            android:drawablePadding="12dp"
+            android:padding="8dp"
+            android:background="#6ef4f4f4"/>
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/testingInputLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:theme="@style/Theme.AppCompat"
+            app:passwordToggleEnabled="true">
+        <android.support.design.widget.TextInputEditText
             android:id="@+id/Add_plotsize"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -104,9 +227,21 @@
             android:layout_marginRight="16dp"
             android:inputType="number"
             android:layout_marginTop="20dp"
-            android:layout_below="@id/Add_pincode"
-            android:hint="Plot Size"/>
-        <EditText
+            android:hint="Plot Size"
+            android:drawablePadding="12dp"
+            android:padding="8dp"
+            android:background="#6ef4f4f4"/>
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/testingInputLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:theme="@style/Theme.AppCompat"
+            app:passwordToggleEnabled="true">
+        <android.support.design.widget.TextInputEditText
             android:id="@+id/Add_coveredarea"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -114,62 +249,122 @@
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:layout_marginTop="20dp"
-            android:layout_below="@id/Add_plotsize"
-            android:hint="Covere Area"/>
+            android:hint="Covere Area"
+            android:drawablePadding="12dp"
+            android:padding="8dp"
+            android:background="#6ef4f4f4"
+            />
+        </android.support.design.widget.TextInputLayout>
+
         <TextView
             android:id="@+id/connectiontype"
-            android:layout_width="150dp"
-            android:layout_height="50dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:paddingLeft="18dp"
+            android:paddingBottom="16dp"
+            android:paddingRight="18dp"
+            android:paddingTop="16dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:layout_alignParentLeft="true"
             android:text="Connection Type"
-            android:layout_below="@id/Add_coveredarea"
             />
-        <Spinner
-            android:id="@+id/connectionspinner"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_below="@+id/Add_coveredarea"
-            android:layout_toRightOf="@id/connectiontype"
-            android:layout_alignParentRight="true"></Spinner>
-        <EditText
-            android:id="@+id/required_kv"
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/testingInputLayout17"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:inputType="number"
-            android:layout_marginRight="16dp"
-            android:layout_marginTop="20dp"
-            android:layout_below="@id/connectiontype"
-            android:hint="Required KV"/>
-        <EditText
-            android:id="@+id/pos"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginTop="20dp"
-            android:layout_below="@+id/required_kv"
-            android:hint="Purpose Of Supply"/>
-        <EditText
-            android:id="@+id/Adhar_add"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginTop="20dp"
-            android:layout_below="@+id/pos"
-            android:hint="Adhar Number"
-            />
-        <Button
-            android:id="@+id/submit"
-            android:text="Submit"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_alignParentRight="true"
-            android:layout_below="@id/Adhar_add"
-            android:onClick="submitNewdetails"/>
-    </RelativeLayout>
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:theme="@style/Theme.AppCompat"
+            android:paddingLeft="18dp"
+            android:paddingBottom="16dp"
+            android:paddingRight="18dp"
+            android:paddingTop="16dp"
+            app:passwordToggleEnabled="true">
+            <Spinner
+                android:id="@+id/connectionspinner"
+                android:layout_width="match_parent"
+                android:background="#6ef4f4f4"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_toRightOf="@id/connectiontype"
+                ></Spinner>
+        </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/testingInputLayout12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:theme="@style/Theme.AppCompat"
+                app:passwordToggleEnabled="true">
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/required_kv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:inputType="number"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="20dp"
+                    android:hint="Required KV"
+                    android:drawablePadding="12dp"
+                    android:padding="8dp"
+                    android:background="#6ef4f4f4"
+                    />
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/testingInputLayout13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:theme="@style/Theme.AppCompat"
+                app:passwordToggleEnabled="true">
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/pos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="20dp"
+                    android:hint="Purpose Of Supply"
+                    android:drawablePadding="12dp"
+                    android:padding="8dp"
+                    android:background="#6ef4f4f4"/>
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/testingInputLayout14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:theme="@style/Theme.AppCompat"
+                app:passwordToggleEnabled="true">
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/Adhar_add"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="20dp"
+                    android:hint="Adhar Number"
+                    android:drawablePadding="12dp"
+                    android:padding="8dp"
+                    android:background="#6ef4f4f4"
+                    />
+            </android.support.design.widget.TextInputLayout>
+            <Button
+                android:id="@+id/submit"
+                android:text="Submit"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_alignParentRight="true"
 
+                android:onClick="submitNewdetails"/>
+
+    </LinearLayout>
 </ScrollView>
