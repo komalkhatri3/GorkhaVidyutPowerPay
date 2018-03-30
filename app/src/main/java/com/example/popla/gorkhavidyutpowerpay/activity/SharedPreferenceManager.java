@@ -9,25 +9,44 @@ import android.content.SharedPreferences;
 
 public class SharedPreferenceManager {
 
-    SharedPreferences pref;
-    SharedPreferences.Editor editor;
-    Context context;
+    public static final String SHARED_PREF = "shared_pref";
 
-    
+    //Key
+    public static final String isWalkThroughDone = "isWalkThroughDone";
+
+
+    private SharedPreferences mPref;
+
+    private static SharedPreferenceManager sInstance;
+
+    public static SharedPreferenceManager getInstance(Context context){
+        if(sInstance == null){
+            sInstance = new SharedPreferenceManager(context);
+        }
+
+        return sInstance;
+    }
+
     public SharedPreferenceManager(Context context)
     {
-        this.context=context;
-        pref=context.getSharedPreferences("first",0);
-        editor = pref.edit();
+        mPref=context.getSharedPreferences(SHARED_PREF,Context.MODE_PRIVATE);
     }
-    public void setFirst(boolean isFirst)
+    public void setBoolean(String key,boolean bool)
     {
-        editor.putBoolean("check",isFirst);
-        editor.commit();
+        mPref.edit().putBoolean(key,bool).apply();
+    }
 
-    }
-    public static boolean Check()
+    public boolean getBoolean(String key)
     {
-        return pref.getBoolean("check",true);
+        return mPref.getBoolean(key,false);
+    }
+
+    public void setString(String key, String str)
+    {
+        mPref.edit().putString(key,str).apply();
+    }
+    public String getString(String key)
+    {
+        return mPref.getString(key,"");
     }
 }
