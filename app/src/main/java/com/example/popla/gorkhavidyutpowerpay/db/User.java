@@ -16,6 +16,7 @@ public class User {
     @Id(autoincrement = true)
     private Long user_id;
     private String user_name;
+    private String user_type;
     private String user_email;
     private Integer user_mobile;
     private Long user_aadhar;
@@ -34,9 +35,10 @@ public class User {
     }
 
     @Generated
-    public User(Long user_id, String user_name, String user_email, Integer user_mobile, Long user_aadhar, String user_password, String user_kno) {
+    public User(Long user_id, String user_name, String user_type, String user_email, Integer user_mobile, Long user_aadhar, String user_password, String user_kno) {
         this.user_id = user_id;
         this.user_name = user_name;
+        this.user_type = user_type;
         this.user_email = user_email;
         this.user_mobile = user_mobile;
         this.user_aadhar = user_aadhar;
@@ -58,6 +60,14 @@ public class User {
 
     public void setUser_name(String user_name) {
         this.user_name = user_name;
+    }
+
+    public String getUser_type() {
+        return user_type;
+    }
+
+    public void setUser_type(String user_type) {
+        this.user_type = user_type;
     }
 
     public String getUser_email() {

@@ -32,6 +32,7 @@
         <activity android:name="com.narendra.myapplication.BillDetails" />
         <activity android:name=".activity.Notifications" />
         <activity android:name=".activity.BillDetailss" />
+        <activity android:name=".activity.Complaints"/>
         <activity android:name=".activity.Introduction">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -24,11 +24,10 @@ public class Bill_detailsDao extends AbstractDao<Bill_details, Long> {
     public static class Properties {
         public final static Property Bill_id = new Property(0, Long.class, "Bill_id", true, "BILL_ID");
         public final static Property K_no = new Property(1, String.class, "k_no", false, "K_NO");
-        public final static Property Previous_read = new Property(2, String.class, "previous_read", false, "PREVIOUS_READ");
-        public final static Property Current_read = new Property(3, String.class, "current_read", false, "CURRENT_READ");
-        public final static Property Generated_date = new Property(4, java.util.Date.class, "generated_date", false, "GENERATED_DATE");
+        public final static Property Current_read = new Property(2, String.class, "current_read", false, "CURRENT_READ");
+        public final static Property Generated_date = new Property(3, java.util.Date.class, "generated_date", false, "GENERATED_DATE");
+        public final static Property Due_date = new Property(4, String.class, "due_date", false, "DUE_DATE");
         public final static Property Paid_by = new Property(5, String.class, "paid_by", false, "PAID_BY");
-        public final static Property Receipt_no = new Property(6, String.class, "receipt_no", false, "RECEIPT_NO");
     }
 
 
@@ -46,11 +45,10 @@ public class Bill_detailsDao extends AbstractDao<Bill_details, Long> {
         db.execSQL("CREATE TABLE " + constraint + "\"BILL_DETAILS\" (" + //
                 "\"BILL_ID\" INTEGER PRIMARY KEY AUTOINCREMENT ," + // 0: Bill_id
                 "\"K_NO\" TEXT," + // 1: k_no
-                "\"PREVIOUS_READ\" TEXT," + // 2: previous_read
-                "\"CURRENT_READ\" TEXT," + // 3: current_read
-                "\"GENERATED_DATE\" INTEGER," + // 4: generated_date
-                "\"PAID_BY\" TEXT," + // 5: paid_by
-                "\"RECEIPT_NO\" TEXT);"); // 6: receipt_no
+                "\"CURRENT_READ\" TEXT," + // 2: current_read
+                "\"GENERATED_DATE\" INTEGER," + // 3: generated_date
+                "\"DUE_DATE\" TEXT," + // 4: due_date
+                "\"PAID_BY\" TEXT);"); // 5: paid_by
     }
 
     /** Drops the underlying database table. */
@@ -73,29 +71,24 @@ public class Bill_detailsDao extends AbstractDao<Bill_details, Long> {
             stmt.bindString(2, k_no);
         }
  
-        String previous_read = entity.getPrevious_read();
-        if (previous_read != null) {
-            stmt.bindString(3, previous_read);
-        }
- 
         String current_read = entity.getCurrent_read();
         if (current_read != null) {
-            stmt.bindString(4, current_read);
+            stmt.bindString(3, current_read);
         }
  
         java.util.Date generated_date = entity.getGenerated_date();
         if (generated_date != null) {
-            stmt.bindLong(5, generated_date.getTime());
+            stmt.bindLong(4, generated_date.getTime());
+        }
+ 
+        String due_date = entity.getDue_date();
+        if (due_date != null) {
+            stmt.bindString(5, due_date);
         }
  
         String paid_by = entity.getPaid_by();
         if (paid_by != null) {
             stmt.bindString(6, paid_by);
-        }
- 
-        String receipt_no = entity.getReceipt_no();
-        if (receipt_no != null) {
-            stmt.bindString(7, receipt_no);
         }
     }
 
@@ -113,29 +106,24 @@ public class Bill_detailsDao extends AbstractDao<Bill_details, Long> {
             stmt.bindString(2, k_no);
         }
  
-        String previous_read = entity.getPrevious_read();
-        if (previous_read != null) {
-            stmt.bindString(3, previous_read);
-        }
- 
         String current_read = entity.getCurrent_read();
         if (current_read != null) {
-            stmt.bindString(4, current_read);
+            stmt.bindString(3, current_read);
         }
  
         java.util.Date generated_date = entity.getGenerated_date();
         if (generated_date != null) {
-            stmt.bindLong(5, generated_date.getTime());
+            stmt.bindLong(4, generated_date.getTime());
+        }
+ 
+        String due_date = entity.getDue_date();
+        if (due_date != null) {
+            stmt.bindString(5, due_date);
         }
  
         String paid_by = entity.getPaid_by();
         if (paid_by != null) {
             stmt.bindString(6, paid_by);
-        }
- 
-        String receipt_no = entity.getReceipt_no();
-        if (receipt_no != null) {
-            stmt.bindString(7, receipt_no);
         }
     }
 
@@ -149,11 +137,10 @@ public class Bill_detailsDao extends AbstractDao<Bill_details, Long> {
         Bill_details entity = new Bill_details( //
             cursor.isNull(offset + 0) ? null : cursor.getLong(offset + 0), // Bill_id
             cursor.isNull(offset + 1) ? null : cursor.getString(offset + 1), // k_no
-            cursor.isNull(offset + 2) ? null : cursor.getString(offset + 2), // previous_read
-            cursor.isNull(offset + 3) ? null : cursor.getString(offset + 3), // current_read
-            cursor.isNull(offset + 4) ? null : new java.util.Date(cursor.getLong(offset + 4)), // generated_date
-            cursor.isNull(offset + 5) ? null : cursor.getString(offset + 5), // paid_by
-            cursor.isNull(offset + 6) ? null : cursor.getString(offset + 6) // receipt_no
+            cursor.isNull(offset + 2) ? null : cursor.getString(offset + 2), // current_read
+            cursor.isNull(offset + 3) ? null : new java.util.Date(cursor.getLong(offset + 3)), // generated_date
+            cursor.isNull(offset + 4) ? null : cursor.getString(offset + 4), // due_date
+            cursor.isNull(offset + 5) ? null : cursor.getString(offset + 5) // paid_by
         );
         return entity;
     }
@@ -162,11 +149,10 @@ public class Bill_detailsDao extends AbstractDao<Bill_details, Long> {
     public void readEntity(Cursor cursor, Bill_details entity, int offset) {
         entity.setBill_id(cursor.isNull(offset + 0) ? null : cursor.getLong(offset + 0));
         entity.setK_no(cursor.isNull(offset + 1) ? null : cursor.getString(offset + 1));
-        entity.setPrevious_read(cursor.isNull(offset + 2) ? null : cursor.getString(offset + 2));
-        entity.setCurrent_read(cursor.isNull(offset + 3) ? null : cursor.getString(offset + 3));
-        entity.setGenerated_date(cursor.isNull(offset + 4) ? null : new java.util.Date(cursor.getLong(offset + 4)));
+        entity.setCurrent_read(cursor.isNull(offset + 2) ? null : cursor.getString(offset + 2));
+        entity.setGenerated_date(cursor.isNull(offset + 3) ? null : new java.util.Date(cursor.getLong(offset + 3)));
+        entity.setDue_date(cursor.isNull(offset + 4) ? null : cursor.getString(offset + 4));
         entity.setPaid_by(cursor.isNull(offset + 5) ? null : cursor.getString(offset + 5));
-        entity.setReceipt_no(cursor.isNull(offset + 6) ? null : cursor.getString(offset + 6));
      }
     
     @Override

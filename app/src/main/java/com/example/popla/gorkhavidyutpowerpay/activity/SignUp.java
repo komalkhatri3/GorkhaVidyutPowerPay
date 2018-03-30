@@ -14,6 +14,7 @@ import com.example.popla.gorkhavidyutpowerpay.PowerApplication;
 import com.example.popla.gorkhavidyutpowerpay.R;
 import com.example.popla.gorkhavidyutpowerpay.db.DaoSession;
 import com.example.popla.gorkhavidyutpowerpay.db.Register;
+import com.example.popla.gorkhavidyutpowerpay.manager.RegisterManager;
 
 public class SignUp extends AppCompatActivity {
 
@@ -89,7 +90,8 @@ public class SignUp extends AppCompatActivity {
         register.setUser_aadhar(uaadhar.getText().toString());
         register.setUser_password(upassword.getText().toString());
         register.setUser_kno(ukno.getText().toString());
-        daoSession.getRegisterDao().insert(register);
+        RegisterManager.insertOrReplace(this,register);
+        //daoSession.getRegisterDao().insert(register);
 
         /*uname.setText(null);
         uemail.setText(null);

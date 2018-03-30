@@ -88,7 +88,6 @@ public class PutBillDetail extends AppCompatActivity {
 
         bill_details.setK_no(kno.getText().toString());
         //bill_details.setK_no(name.getText().toString());
-        bill_details.setPrevious_read(prev_read.getText().toString());
         bill_details.setCurrent_read(curr_read.getText().toString());
         bill_details.setGenerated_date(date);
         daoSession.getBill_detailsDao().insert(bill_details);

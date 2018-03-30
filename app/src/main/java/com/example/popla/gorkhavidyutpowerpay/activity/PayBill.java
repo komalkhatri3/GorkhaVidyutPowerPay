@@ -51,7 +51,6 @@ public class PayBill extends AppCompatActivity {
             {
                 kno.add(list.get(i).getK_no());
                 name.add(list.get(i).getK_no());
-                prev_read.add(list.get(i).getPrevious_read());
                 curr_read.add(list.get(i).getCurrent_read());
                 generateddate.add(list.get(i).getGenerated_date().toString());
             }
