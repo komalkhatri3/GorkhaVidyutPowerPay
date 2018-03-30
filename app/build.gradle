@@ -1,7 +1,7 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 23
+    compileSdkVersion 25
     buildToolsVersion '25.0.0'
     defaultConfig {
         applicationId "com.narendra.myapplication"
@@ -27,9 +27,10 @@ dependencies {
 
 
     compile "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
-    compile 'org.greenrobot:greendao:3.2.0'
     compile "com.android.support:design:$rootProject.supportLibraryVersion"
-    compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile "com.android.support:recyclerview-v7:$rootProject.supportLibraryVersion"
+    compile 'org.greenrobot:greendao:3.2.0'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
     testCompile 'junit:junit:4.12'
+    compile 'pl.droidsonroids.gif:android-gif-drawable:1.2.11'
 }

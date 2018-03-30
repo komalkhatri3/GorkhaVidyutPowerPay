@@ -11,11 +11,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".Power" />
         <activity android:name=".activity.Login">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".activity.SignUp" />
         <activity android:name=".activity.EmployeRegistration" />
@@ -31,6 +27,13 @@
         <activity android:name="com.narendra.myapplication.BillDetails" />
         <activity android:name=".activity.Notifications" />
         <activity android:name=".activity.BillDetailss" />
+        <activity android:name=".activity.Introduction">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
