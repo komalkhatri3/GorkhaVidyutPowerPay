@@ -57,7 +57,7 @@ public class Introduction extends AppCompatActivity {
         dotsLayout=(LinearLayout)findViewById(R.id.layoutData);
         skip=(Button)findViewById(R.id.btn_skip);
         next=(Button)findViewById(R.id.btn_next);
-        layouts = new int[]{R.layout.screen1, R.layout.screen2, R.layout.screen3, R.layout.screen4, R.layout.screen5};
+        layouts = new int[]{R.layout.screen2, R.layout.screen3, R.layout.screen4, R.layout.screen5}; //R.layout.screen1,
         addBottomDots(0);
         changeStatusBarcolor();
         viewPagerAdapter=new ViewPagerAdapter();
@@ -68,8 +68,6 @@ public class Introduction extends AppCompatActivity {
             @Override
             public void onClick(View v)
             {
-
-
                 Intent i = new Intent(Introduction.this,Login.class);
                 startActivity(i);
                 finish();
@@ -82,16 +80,18 @@ public class Introduction extends AppCompatActivity {
             public void onClick(View v)
             {
 
-                int current= getitem(+1);
-                if(current<layouts.length)
+                //int current= getitem(+1);
+                if(next.getText().toString().toLowerCase().equalsIgnoreCase("done"))
                 {
-                    viewPager.setCurrentItem(current);
-                }
-                else
-                {
+
                     Intent i = new Intent(Introduction.this,Login.class);
                     startActivity(i);
                     finish();
+
+                }
+                else
+                {
+                    viewPager.setCurrentItem(viewPager.getCurrentItem()+1);
                 }
             }
         });
@@ -121,10 +121,6 @@ public class Introduction extends AppCompatActivity {
         }
     }
 
-    private int getitem(int i)
-    {
-        return viewPager.getCurrentItem()+1;
-    }
     ViewPager.OnPageChangeListener viewListener = new ViewPager.OnPageChangeListener() {
 
         @Override
@@ -136,7 +132,7 @@ public class Introduction extends AppCompatActivity {
         public void onPageSelected(int position) {
             addBottomDots(position);
             if (position == layouts.length - 1) {
-                next.setText("PROCEED");
+                next.setText("DONE");
                 skip.setVisibility(View.GONE);
             } else {
                 next.setText("NEXT");
