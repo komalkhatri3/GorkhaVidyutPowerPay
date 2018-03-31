@@ -59,7 +59,6 @@ public class ParticularEmployeeDetail extends AppCompatActivity {
         editage.setText(list.get(point).getEmp_age());
         editdesig.setText(list.get(point).getEmp_designation());
 
-
     }
 
     public void employeeRemove(View view)

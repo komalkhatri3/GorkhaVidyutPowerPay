@@ -44,9 +44,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.new_connections.New_Connection_Status" />
+        <activity android:name=".activity.Employee_Data.ParticularEmployeeDetail"/>
         <activity android:name=".activity.new_connections.Add_New_Connection_Clicks">
 
         </activity>
+        <activity android:name=".activity.Verifier.ParticulaApplicant"></activity>
         <activity android:name=".activity.PaymentGateway"></activity>
     </application>
 
