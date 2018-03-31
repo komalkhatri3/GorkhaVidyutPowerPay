@@ -55,7 +55,7 @@ public class Introduction extends AppCompatActivity {
         dotsLayout=(LinearLayout)findViewById(R.id.layoutData);
         skip=(Button)findViewById(R.id.btn_skip);
         next=(Button)findViewById(R.id.btn_next);
-        layouts = new int[]{R.layout.screen2, R.layout.screen3, R.layout.screen4, R.layout.screen5}; //R.layout.screen1,
+        layouts = new int[]{R.layout.screen2, R.layout.screen3}; //R.layout.screen1, R.layout.screen4,R.layout.screen5
         addBottomDots(0);
         changeStatusBarcolor();
         viewPagerAdapter=new ViewPagerAdapter();

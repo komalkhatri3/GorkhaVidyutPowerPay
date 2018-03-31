@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/screen2">
+    android:background="@drawable/introfirst">
 
 
     <LinearLayout
@@ -10,30 +10,66 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:gravity="center_horizontal"
-        android:orientation="vertical"
-        >
+
+        android:orientation="vertical">
+
         <ImageView
-            android:layout_width="wrap_content"
+            android:layout_width="270dp"
             android:layout_height="wrap_content"
             android:layout_gravity="start"
+            android:layout_marginBottom="150dp"
 
-            android:src="@drawable/paybills"/>
+            android:src="@drawable/sikkimlogo" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Pay Your Bills"
-            android:layout_marginTop="-100dp"
+            android:layout_marginTop="-130dp"
+            android:text="Energy and Power Department"
             android:textColor="@android:color/white"
-            android:textSize="20dp"
-            android:textStyle="bold"/>
+            android:textSize="21dp"
+            android:textStyle="italic" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Pay your bills on just one click"
+            android:layout_marginTop="10dp"
+            android:text="Governmant Of Sikkim"
             android:textAlignment="center"
             android:textColor="@android:color/white"
-            android:textSize="@dimen/activity_horizontal_margin"/>
+            android:textSize="19dp" />
 
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="450dp">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:src="@drawable/onlinepay3"
+            android:layout_marginLeft="30dp"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/onlinepay4"
+            android:layout_marginLeft="23dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/onlinepay5"
+            android:layout_marginLeft="23dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/onlinepay6"
+            android:layout_marginLeft="23dp"/>
 
 
     </LinearLayout>

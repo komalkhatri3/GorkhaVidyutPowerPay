@@ -21,7 +21,6 @@ import com.example.popla.gorkhavidyutpowerpay.activity.ApproverP.Approver;
 import com.example.popla.gorkhavidyutpowerpay.activity.Verifier.VerifierNewConnection;
 import com.example.popla.gorkhavidyutpowerpay.manager.UserManager;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Login extends AppCompatActivity {
@@ -78,31 +77,25 @@ public class Login extends AppCompatActivity {
 
     public void onLogInSuccess() {
         //after validate button Click Content
-        if(UserManager.getUserByEmailPassword(this,username,password) != null){
+        /*if(UserManager.getUserByEmailPassword(this,username,password) != null){
             Intent intent = new Intent(this, Homepage.class);
             startActivity(intent);
         } else {
             Toast.makeText(this,"Please Register!!",Toast.LENGTH_SHORT).show();
-        }
+        }*/
 
-        /*if ((emailid.getText().toString().equals("ab@gmail.com")) && (pass.getText().toString().equals("1234"))) {
-            intent = new Intent(this, Homepage.class);
+        if ((emailid.getText().toString().equals("ab@gmail.com")) && (pass.getText().toString().equals("1234"))) {
+            Intent intent = new Intent(this, Homepage.class);
             startActivity(intent);
         } else if ((emailid.getText().toString().equals("ac@gmail.com")) && (pass.getText().toString().equals("1234"))) {
-            intent = new Intent(this, VerifierNewConnection.class);
+            Intent intent = new Intent(this, VerifierNewConnection.class);
             startActivity(intent);
         } else if ((emailid.getText().toString().equals("ad@gmail.com")) && (pass.getText().toString().equals("1234"))) {
-            intent = new Intent(this, Approver.class);
+            Intent intent = new Intent(this, Approver.class);
             startActivity(intent);
         } else if ((emailid.getText().toString()) != null) {
-            ListView listView;
-            List<String> eid;
-            List<String> pass;
-            listView = (ListView) findViewById(R.id.list_view);
-            eid = new ArrayList<String>();
-            pass = new ArrayList<String>();
-
-        }*/
+            Toast.makeText(this,"Please Register!!",Toast.LENGTH_SHORT).show();
+        }
     }
 
     public boolean validate() {
