@@ -1,4 +1,4 @@
-package com.example.popla.gorkhavidyutpowerpay.activity;
+package com.example.popla.gorkhavidyutpowerpay.activity.new_connections;
 
 import android.app.DatePickerDialog;
 import android.support.v4.app.FragmentActivity;
@@ -98,7 +98,9 @@ public class AddNewConnection extends FragmentActivity{
         new_connection.setApplicant_reqKV(Float.parseFloat(reqKV.getText().toString()));
         new_connection.setApplicant_pos(pos.getText().toString());
         new_connection.setApplicant_aadhar(addhar.getText().toString());
+        new_connection.setNew_Con_LogInBy("komal");
+        new_connection.setNew_Con_Req_S("initial");
         daoSession.getNew_ConnectionDao().insert(new_connection);
-        Toast.makeText(this,"Employe Registered",Toast.LENGTH_LONG).show();
+        Toast.makeText(this,"Employee Registered",Toast.LENGTH_LONG).show();
     }
 }

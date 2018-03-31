@@ -39,6 +39,8 @@ public class New_ConnectionDao extends AbstractDao<New_Connection, Long> {
         public final static Property Applicant_aadhar = new Property(14, String.class, "applicant_aadhar", false, "APPLICANT_AADHAR");
         public final static Property Submit_date = new Property(15, String.class, "submit_date", false, "SUBMIT_DATE");
         public final static Property K_no = new Property(16, String.class, "k_no", false, "K_NO");
+        public final static Property New_Con_Req_S = new Property(17, String.class, "New_Con_Req_S", false, "NEW__CON__REQ__S");
+        public final static Property New_Con_LogInBy = new Property(18, String.class, "New_Con_LogInBy", false, "NEW__CON__LOG_IN_BY");
     }
 
 
@@ -70,7 +72,9 @@ public class New_ConnectionDao extends AbstractDao<New_Connection, Long> {
                 "\"APPLICANT_POS\" TEXT," + // 13: applicant_pos
                 "\"APPLICANT_AADHAR\" TEXT," + // 14: applicant_aadhar
                 "\"SUBMIT_DATE\" TEXT," + // 15: submit_date
-                "\"K_NO\" TEXT);"); // 16: k_no
+                "\"K_NO\" TEXT," + // 16: k_no
+                "\"NEW__CON__REQ__S\" TEXT," + // 17: New_Con_Req_S
+                "\"NEW__CON__LOG_IN_BY\" TEXT);"); // 18: New_Con_LogInBy
     }
 
     /** Drops the underlying database table. */
@@ -167,6 +171,16 @@ public class New_ConnectionDao extends AbstractDao<New_Connection, Long> {
         if (k_no != null) {
             stmt.bindString(17, k_no);
         }
+ 
+        String New_Con_Req_S = entity.getNew_Con_Req_S();
+        if (New_Con_Req_S != null) {
+            stmt.bindString(18, New_Con_Req_S);
+        }
+ 
+        String New_Con_LogInBy = entity.getNew_Con_LogInBy();
+        if (New_Con_LogInBy != null) {
+            stmt.bindString(19, New_Con_LogInBy);
+        }
     }
 
     @Override
@@ -257,6 +271,16 @@ public class New_ConnectionDao extends AbstractDao<New_Connection, Long> {
         if (k_no != null) {
             stmt.bindString(17, k_no);
         }
+ 
+        String New_Con_Req_S = entity.getNew_Con_Req_S();
+        if (New_Con_Req_S != null) {
+            stmt.bindString(18, New_Con_Req_S);
+        }
+ 
+        String New_Con_LogInBy = entity.getNew_Con_LogInBy();
+        if (New_Con_LogInBy != null) {
+            stmt.bindString(19, New_Con_LogInBy);
+        }
     }
 
     @Override
@@ -283,7 +307,9 @@ public class New_ConnectionDao extends AbstractDao<New_Connection, Long> {
             cursor.isNull(offset + 13) ? null : cursor.getString(offset + 13), // applicant_pos
             cursor.isNull(offset + 14) ? null : cursor.getString(offset + 14), // applicant_aadhar
             cursor.isNull(offset + 15) ? null : cursor.getString(offset + 15), // submit_date
-            cursor.isNull(offset + 16) ? null : cursor.getString(offset + 16) // k_no
+            cursor.isNull(offset + 16) ? null : cursor.getString(offset + 16), // k_no
+            cursor.isNull(offset + 17) ? null : cursor.getString(offset + 17), // New_Con_Req_S
+            cursor.isNull(offset + 18) ? null : cursor.getString(offset + 18) // New_Con_LogInBy
         );
         return entity;
     }
@@ -307,6 +333,8 @@ public class New_ConnectionDao extends AbstractDao<New_Connection, Long> {
         entity.setApplicant_aadhar(cursor.isNull(offset + 14) ? null : cursor.getString(offset + 14));
         entity.setSubmit_date(cursor.isNull(offset + 15) ? null : cursor.getString(offset + 15));
         entity.setK_no(cursor.isNull(offset + 16) ? null : cursor.getString(offset + 16));
+        entity.setNew_Con_Req_S(cursor.isNull(offset + 17) ? null : cursor.getString(offset + 17));
+        entity.setNew_Con_LogInBy(cursor.isNull(offset + 18) ? null : cursor.getString(offset + 18));
      }
     
     @Override

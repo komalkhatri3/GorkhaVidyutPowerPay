@@ -5,30 +5,43 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.popla.gorkhavidyutpowerpay.activity.PayBill">
-    <android.support.design.widget.TextInputLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="gtrgtr"
-            android:gravity="bottom"/>
-    </android.support.design.widget.TextInputLayout>
+
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/first"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="K_NUMBER"/>
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_above="@+id/k_no"
+        android:layout_centerHorizontal="true"
+        android:text="Enter Bill K-Number"
+        />
+
     <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/k_no"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:gravity="center"
         android:hint="K_Number"
-        android:id="@+id/k_no"/>
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btn_pay"
         android:onClick="pay"
-        />
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:text="Pay Bill"
+        android:gravity="bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="157dp" />
 
 </RelativeLayout>

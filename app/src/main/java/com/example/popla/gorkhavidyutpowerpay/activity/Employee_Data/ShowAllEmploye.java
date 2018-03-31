@@ -49,13 +49,12 @@ public class ShowAllEmploye extends AppCompatActivity {
     {
         DaoSession daoSession = ((PowerApplication)getApplication()).getDaoSession();
         List <Employee> list= daoSession.getEmployeeDao().loadAll();
-        for(int i=0;i<list.size();i++)
-        {
+        for(int i=0;i<list.size();i++) {
 
 
-          ename.add(list.get(i).getEmp_name());
+            ename.add(list.get(i).getEmp_name());
             eid.add(list.get(i).getEmp_email_id());
-          edesig.add(list.get(i).getEmp_designation());
+            edesig.add(list.get(i).getEmp_designation());
 
         }
      //  ename[1] = list.get(0).getEmp_name();
