@@ -34,7 +34,7 @@ public class BillDetailss extends AppCompatActivity {
         setContentView(R.layout.activity_bill_detailss);
         TextView BillId=(TextView) findViewById(R.id.Bill_Id);
         TextView KNo=(TextView) findViewById(R.id.K_No);
-        TextView UserName=(TextView)findViewById(R.id.UserName);
+        TextView UserName=(TextView)findViewById(R.id.User_Name);
         TextView UserAddress=(TextView)findViewById(R.id.User_Address);
         TextView Reading=(TextView)findViewById(R.id.Reading);
         TextView units=(TextView) findViewById(R.id.Units);
@@ -46,18 +46,23 @@ public class BillDetailss extends AppCompatActivity {
         DaoSession daoSession = ((PowerApplication) getApplication()).getDaoSession();
 
 
-        Bill_details bill_details = daoSession.getBill_detailsDao().load(Long.parseLong(Kno));
+        //Bill_details bill_details = daoSession.getBill_detailsDao().load(Long.parseLong(Kno));
 
-        New_Connection new_connection = daoSession.getNew_ConnectionDao().queryBuilder().where(New_ConnectionDao.Properties.K_no.eq(Long.parseLong(Kno))).build().unique();
+        //New_Connection new_connection = daoSession.getNew_ConnectionDao().queryBuilder().where(New_ConnectionDao.Properties.K_no.eq(Long.parseLong(Kno))).build().unique();
 
-        Toast.makeText(this, bill_details.getCurrent_read(), Toast.LENGTH_LONG).show();
-        BillId.setText(bill_details.getBill_id().toString());
+        //Toast.makeText(this, bill_details.getCurrent_read(), Toast.LENGTH_LONG).show();
+        //BillId.setText(bill_details.getBill_id().toString());
+        BillId.setText("145627");
+        //KNo.setText(Kno);
         KNo.setText(Kno);
-        UserName.setText(new_connection.getApplicant_name());
-        UserAddress.setText(new_connection.getApplicant_area()+new_connection.getApplicant_city());
-        Reading.setText(bill_details.getCurrent_read());
-        units.setText("");
-        Amount.setText("1000");
+        //UserName.setText(new_connection.getApplicant_name());
+        UserName.setText("Deepesh");
+        //UserAddress.setText(new_connection.getApplicant_area()+new_connection.getApplicant_city());
+        UserAddress.setText("Gangtok, Sikkim");
+        //Reading.setText(bill_details.getCurrent_read());
+        Reading.setText("432");
+        units.setText("w");
+        Amount.setText("1400.50");
 
 
     }

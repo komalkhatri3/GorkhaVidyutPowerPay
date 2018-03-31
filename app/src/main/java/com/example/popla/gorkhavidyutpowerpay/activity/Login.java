@@ -93,7 +93,13 @@ public class Login extends AppCompatActivity {
         } else if ((emailid.getText().toString().equals("ad@gmail.com")) && (pass.getText().toString().equals("1234"))) {
             Intent intent = new Intent(this, Approver.class);
             startActivity(intent);
-        } else if ((emailid.getText().toString()) != null) {
+        }
+        else if((emailid.getText().toString().equals("admin@gmail.com"))&&(pass.getText().toString().equals("1234")))
+        {
+            Intent intent = new Intent(this,EmployeRegistration.class);
+            startActivity(intent);
+        }
+        else if ((emailid.getText().toString()) != null) {
             Toast.makeText(this,"Please Register!!",Toast.LENGTH_SHORT).show();
         }
     }
