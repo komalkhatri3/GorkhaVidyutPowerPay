@@ -39,9 +39,9 @@ public class Notifications extends AppCompatActivity {
         notifaications.setTicker("this is ticker");
         notifaications.setVibrate(new long[] {1000, 1000, 1000, 1000});
         notifaications.setWhen(0);
-        notifaications.setContentTitle("Here is title");
-        notifaications.setContentText("Body of notification");
-         notifaications.addAction(R.drawable.leaf,"Action1",pendingIntent);
+        notifaications.setContentTitle("PowerPay");
+        notifaications.setContentText("your bill is generated. please pay before 25th of each month.");
+        notifaications.addAction(R.drawable.leaf,"Action1",pendingIntent);
         notifaications.addAction(R.drawable.leaf,"Action2",pendingIntent);
 
         NotificationManager nb=(NotificationManager) getSystemService(NOTIFICATION_SERVICE);

@@ -18,6 +18,10 @@
             android:id="@+id/notification"
             android:icon="@drawable/notifications"
             android:title="Notifications" />
+        <item
+            android:id="@+id/logout"
+            android:icon="@android:drawable/ic_lock_idle_lock"
+            android:title="logout" />
     </group>
 
     <item android:title="Communicate">

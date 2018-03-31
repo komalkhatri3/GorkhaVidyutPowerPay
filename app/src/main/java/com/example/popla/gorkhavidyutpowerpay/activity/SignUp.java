@@ -2,25 +2,24 @@ package com.example.popla.gorkhavidyutpowerpay.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.popla.gorkhavidyutpowerpay.PowerApplication;
 import com.example.popla.gorkhavidyutpowerpay.R;
-import com.example.popla.gorkhavidyutpowerpay.db.DaoSession;
-import com.example.popla.gorkhavidyutpowerpay.db.Register;
-import com.example.popla.gorkhavidyutpowerpay.manager.RegisterManager;
+import com.example.popla.gorkhavidyutpowerpay.db.User;
+import com.example.popla.gorkhavidyutpowerpay.manager.UserManager;
 
 public class SignUp extends AppCompatActivity {
 
+    public static final String USER = "user";
+    public static final String EMPLOYEE = "employee";
+    public static final String ADMIN = "admin";
+
+
     EditText uname,uemail,umobile,uaadhar,upassword,ukno,repassword;
-    DaoSession daoSession;
-    Register register;
     String n,e,p,a,pass,k,r;
     Button b1;
     @Override
@@ -42,64 +41,32 @@ public class SignUp extends AppCompatActivity {
                 register();
             }
         });
-        repassword.addTextChangedListener(new TextWatcher() {
-
-            public void afterTextChanged(Editable s) {
-                String s1 = upassword.getText().toString();
-                if((s.length() > 0) && (s1.length() > 0))
-                {      if (!(repassword.getText().toString().equals(upassword.getText().toString())))
-                    repassword.setError("Password Is Not Matched");
-                }
-            }
-            public void beforeTextChanged(CharSequence s, int start,
-                                          int count, int after) {
-            }
-
-            public void onTextChanged(CharSequence s, int start,
-                                      int before, int count) {
-
-            }
-        });
-
     }
-    public void register()
-    {
+    public void register() {
         intialize();
-        if(!validate())
-        {
-        }
-        else
-        {
+        if (validate()) {
             onLogInSuccess();
+        } else {
+            Toast.makeText(this,"",Toast.LENGTH_SHORT).show();
         }
 
     }
     public void onLogInSuccess()
     {
-        //after validate button Click Content
-        daoSession =((PowerApplication)getApplication()).getDaoSession();
 
-        daoSession =((PowerApplication)getApplication()).getDaoSession();
+        User user=new User();
+        user.setUser_name(n);
+        user.setUser_email(e);
+        user.setUser_type(USER);
+        user.setUser_mobile(Integer.parseInt(p));
+        user.setUser_aadhar(Long.parseLong(a));
+        user.setUser_password(pass);
+        user.setUser_kno(k);
+        UserManager.insertOrReplace(this,user);
 
-        register=new Register();
-        //String un=uname.getText().toString();
 
-        register.setUser_name(uname.getText().toString());
-        register.setUser_email(uemail.getText().toString());
-        register.setUser_mobile(umobile.getText().toString());
-        register.setUser_aadhar(uaadhar.getText().toString());
-        register.setUser_password(upassword.getText().toString());
-        register.setUser_kno(ukno.getText().toString());
-        RegisterManager.insertOrReplace(this,register);
-        //daoSession.getRegisterDao().insert(register);
-
-        /*uname.setText(null);
-        uemail.setText(null);
-        umobile.setText(null);
-        uaadhar.setText(null);
-        upassword.setText(null);
-        ukno.setText(null);*/
-        Toast.makeText(this, "User Registered Successfully", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "User Registered Successfully,Please Login to continue.", Toast.LENGTH_SHORT).show();
+        finish();
 
     }
     public void intialize()
@@ -114,73 +81,42 @@ public class SignUp extends AppCompatActivity {
     }
 
     public boolean validate() {
-        boolean valid=true;
-        if(n.isEmpty()){
+        boolean valid = true;
+        if (n.isEmpty()) {
             uname.setError("Please Enter Name");
-            valid=false;
+            valid = false;
         }
-        if (e.isEmpty()||!Patterns.EMAIL_ADDRESS.matcher(e).matches())
-        {
+        if (e.isEmpty() || !Patterns.EMAIL_ADDRESS.matcher(e).matches()) {
             uemail.setError("Please Enter Valid Email Id");
-            valid=false;
+            valid = false;
         }
-        if (p.isEmpty())
-        {
+        if (p.isEmpty()) {
             umobile.setError("Please Enter  Mobile No.");
-            valid=false;
+            valid = false;
         }
-        if (pass.isEmpty())
-        {
+        if (pass.isEmpty()) {
             upassword.setError("Please Enter Password");
-            valid=false;
+            valid = false;
         }
-        if (a.isEmpty())
-        {
-            uaadhar.setError("Please Enter 12 Digit Aadhar No.");
-            valid=false;
-        }
-        if (k.isEmpty())
-        {
-            ukno.setError("Please Enter 9 Digit Key No.");
-            valid=false;
-        }
-        if (r.isEmpty())
-        {
+        if (r.isEmpty()) {
             repassword.setError("Re Enter Password");
-            valid=false;
+            valid = false;
         }
+
+        if(!pass.isEmpty() && !r.isEmpty() && pass.equals(r)){
+            repassword.setError("password not matching with the previous password");
+            valid = false;
+        }
+        if (a.isEmpty()) {
+            uaadhar.setError("Please Enter 12 Digit Aadhar No.");
+            valid = false;
+        }
+        if (k.isEmpty()) {
+            ukno.setError("Please Enter 9 Digit Key No.");
+            valid = false;
+        }
+
         return valid;
     }
 
-/*    public void signup(View view)
-    {
-
-        daoSession =((AppController)getApplication()).getDaoSession();
-        register=new Register();
-        //String un=uname.getText().toString();
-
-        register.setUser_name(uname.getText().toString());
-        register.setUser_email(uemail.getText().toString());
-        register.setUser_mobile(umobile.getText().toString());
-        register.setUser_aadhar(uaadhar.getText().toString());
-        register.setUser_password(upassword.getText().toString());
-        register.setUser_kno(ukno.getText().toString());
-        daoSession.getRegisterDao().insert(register);
-
-        /*uname.setText(null);
-        uemail.setText(null);
-        umobile.setText(null);
-        uaadhar.setText(null);
-        upassword.setText(null);
-        ukno.setText(null);
-        Toast.makeText(this, "User Registered Successfully", Toast.LENGTH_SHORT).show();
-
-
-    }*/
-/*
-    public void show(View v)
-    {
-        daoSession = ((PowerApplication)getApplication()).getDaoSession();
-
-    }*/
 }
