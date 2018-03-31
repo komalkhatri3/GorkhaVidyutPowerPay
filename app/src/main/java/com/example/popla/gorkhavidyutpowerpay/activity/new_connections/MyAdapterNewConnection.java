@@ -1,4 +1,4 @@
-package com.example.popla.gorkhavidyutpowerpay.activity;
+package com.example.popla.gorkhavidyutpowerpay.activity.new_connections;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -7,32 +7,35 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.popla.gorkhavidyutpowerpay.R;
+import com.example.popla.gorkhavidyutpowerpay.db.New_Connection;
 
 import java.util.List;
 
+/**
+ * Created by DELL on 3/30/2018.
+ */
 
-
-public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
-    private List<String> values;
+public class MyAdapterNewConnection extends  RecyclerView.Adapter<MyAdapterNewConnection.ViewHolder>{
+    private List<New_Connection> values;
 
     // Provide a reference to the views for each data item
     // Complex data items may need more than one view per item, and
     // you provide access to all the views for a data item in a view holder
-    public static class ViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder extends RecyclerView.ViewHolder {
         // each data item is just a string in this case
-        public TextView txtHeader;
-        public TextView txtFooter;
-        public View layout;
+        public TextView txtAppId;
+        public TextView txtUserName;
+        public TextView txtStatus;
 
         public ViewHolder(View v) {
             super(v);
-            layout = v;
-            txtHeader = (TextView) v.findViewById(R.id.firstLine);
-            txtFooter = (TextView) v.findViewById(R.id.secondLine);
+            txtAppId = (TextView) v.findViewById(R.id.Application_Id_S);
+            txtUserName = (TextView) v.findViewById(R.id.UserName_S);
+            txtStatus = (TextView) v.findViewById(R.id.Add_New_Status);
         }
     }
 
-    public void add(int position, String item) {
+    public void add(int position, New_Connection item) {
         values.add(position, item);
         notifyItemInserted(position);
     }
@@ -43,7 +46,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     }
 
     // Provide a suitable constructor (depends on the kind of dataset)
-    public MyAdapter(List<String> myDataset) {
+    public MyAdapterNewConnection(List<New_Connection> myDataset) {
         values = myDataset;
     }
 
@@ -53,7 +56,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
 
     @Override
-    public MyAdapter.ViewHolder onCreateViewHolder(ViewGroup parent,
+    public ViewHolder onCreateViewHolder(ViewGroup parent,
                                                    int viewType) {
         // create a new view
         LayoutInflater inflater = LayoutInflater.from(
@@ -67,13 +70,15 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
     // Replace the contents of a view (invoked by the layout manager)
     @Override
-    public void onBindViewHolder(ViewHolder holder, final int position) {
+    public void onBindViewHolder(MyAdapterNewConnection.ViewHolder holder, final int position) {
         // - get element from your dataset at this position
         // - replace the contents of the view with that element
-        final String name = values.get(position);
-        holder.txtHeader.setText(name);
+        final New_Connection new_connection = values.get(position);
+        holder.txtAppId.setText(new_connection.getApplication_id().toString());
+        holder.txtUserName.setText(new_connection.getApplicant_name());
+        holder.txtStatus.setText(new_connection.getNew_Con_Req_S());
 
-        holder.txtFooter.setText("Footer: " + name);
+
     }
 
     // Return the size of your dataset (invoked by the layout manager)
@@ -81,5 +86,6 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     public int getItemCount() {
         return values.size();
     }
+
 
 }

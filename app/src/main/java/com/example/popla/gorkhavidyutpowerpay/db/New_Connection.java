@@ -31,6 +31,8 @@ public class New_Connection {
     private String applicant_aadhar;
     private String submit_date;
     private String k_no;
+    private String New_Con_Req_S;
+    private String New_Con_LogInBy;
 
     // KEEP FIELDS - put your custom fields here
     // KEEP FIELDS END
@@ -44,7 +46,7 @@ public class New_Connection {
     }
 
     @Generated
-    public New_Connection(Long application_id, String applicant_name, String applicant_fname, String applicant_DOB, String applicant_occupaion, String applicant_area, String applicant_landmark, String applicant_city, String applicant_pincode, String applicant_contype, Float applicant_Psize, Float applicant_covereda, Float applicant_reqKV, String applicant_pos, String applicant_aadhar, String submit_date, String k_no) {
+    public New_Connection(Long application_id, String applicant_name, String applicant_fname, String applicant_DOB, String applicant_occupaion, String applicant_area, String applicant_landmark, String applicant_city, String applicant_pincode, String applicant_contype, Float applicant_Psize, Float applicant_covereda, Float applicant_reqKV, String applicant_pos, String applicant_aadhar, String submit_date, String k_no, String New_Con_Req_S, String New_Con_LogInBy) {
         this.application_id = application_id;
         this.applicant_name = applicant_name;
         this.applicant_fname = applicant_fname;
@@ -62,6 +64,8 @@ public class New_Connection {
         this.applicant_aadhar = applicant_aadhar;
         this.submit_date = submit_date;
         this.k_no = k_no;
+        this.New_Con_Req_S = New_Con_Req_S;
+        this.New_Con_LogInBy = New_Con_LogInBy;
     }
 
     public Long getApplication_id() {
@@ -198,6 +202,22 @@ public class New_Connection {
 
     public void setK_no(String k_no) {
         this.k_no = k_no;
+    }
+
+    public String getNew_Con_Req_S() {
+        return New_Con_Req_S;
+    }
+
+    public void setNew_Con_Req_S(String New_Con_Req_S) {
+        this.New_Con_Req_S = New_Con_Req_S;
+    }
+
+    public String getNew_Con_LogInBy() {
+        return New_Con_LogInBy;
+    }
+
+    public void setNew_Con_LogInBy(String New_Con_LogInBy) {
+        this.New_Con_LogInBy = New_Con_LogInBy;
     }
 
     // KEEP METHODS - put your custom methods here

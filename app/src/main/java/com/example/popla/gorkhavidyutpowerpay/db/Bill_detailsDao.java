@@ -28,6 +28,7 @@ public class Bill_detailsDao extends AbstractDao<Bill_details, Long> {
         public final static Property Generated_date = new Property(3, java.util.Date.class, "generated_date", false, "GENERATED_DATE");
         public final static Property Due_date = new Property(4, String.class, "due_date", false, "DUE_DATE");
         public final static Property Paid_by = new Property(5, String.class, "paid_by", false, "PAID_BY");
+        public final static Property TimeStamp = new Property(6, Long.class, "TimeStamp", false, "TIME_STAMP");
     }
 
 
@@ -48,7 +49,8 @@ public class Bill_detailsDao extends AbstractDao<Bill_details, Long> {
                 "\"CURRENT_READ\" TEXT," + // 2: current_read
                 "\"GENERATED_DATE\" INTEGER," + // 3: generated_date
                 "\"DUE_DATE\" TEXT," + // 4: due_date
-                "\"PAID_BY\" TEXT);"); // 5: paid_by
+                "\"PAID_BY\" TEXT," + // 5: paid_by
+                "\"TIME_STAMP\" INTEGER);"); // 6: TimeStamp
     }
 
     /** Drops the underlying database table. */
@@ -90,6 +92,11 @@ public class Bill_detailsDao extends AbstractDao<Bill_details, Long> {
         if (paid_by != null) {
             stmt.bindString(6, paid_by);
         }
+ 
+        Long TimeStamp = entity.getTimeStamp();
+        if (TimeStamp != null) {
+            stmt.bindLong(7, TimeStamp);
+        }
     }
 
     @Override
@@ -125,6 +132,11 @@ public class Bill_detailsDao extends AbstractDao<Bill_details, Long> {
         if (paid_by != null) {
             stmt.bindString(6, paid_by);
         }
+ 
+        Long TimeStamp = entity.getTimeStamp();
+        if (TimeStamp != null) {
+            stmt.bindLong(7, TimeStamp);
+        }
     }
 
     @Override
@@ -140,7 +152,8 @@ public class Bill_detailsDao extends AbstractDao<Bill_details, Long> {
             cursor.isNull(offset + 2) ? null : cursor.getString(offset + 2), // current_read
             cursor.isNull(offset + 3) ? null : new java.util.Date(cursor.getLong(offset + 3)), // generated_date
             cursor.isNull(offset + 4) ? null : cursor.getString(offset + 4), // due_date
-            cursor.isNull(offset + 5) ? null : cursor.getString(offset + 5) // paid_by
+            cursor.isNull(offset + 5) ? null : cursor.getString(offset + 5), // paid_by
+            cursor.isNull(offset + 6) ? null : cursor.getLong(offset + 6) // TimeStamp
         );
         return entity;
     }
@@ -153,6 +166,7 @@ public class Bill_detailsDao extends AbstractDao<Bill_details, Long> {
         entity.setGenerated_date(cursor.isNull(offset + 3) ? null : new java.util.Date(cursor.getLong(offset + 3)));
         entity.setDue_date(cursor.isNull(offset + 4) ? null : cursor.getString(offset + 4));
         entity.setPaid_by(cursor.isNull(offset + 5) ? null : cursor.getString(offset + 5));
+        entity.setTimeStamp(cursor.isNull(offset + 6) ? null : cursor.getLong(offset + 6));
      }
     
     @Override

@@ -91,6 +91,10 @@ public class MyGenerator {
         new_connection.addStringProperty("applicant_aadhar");
         new_connection.addStringProperty("submit_date");
         new_connection.addStringProperty("k_no");
+        new_connection.addStringProperty("New_Con_Req_S");
+        new_connection.addStringProperty("New_Con_LogInBy");
+
+
         return new_connection;
     }
 
@@ -103,6 +107,7 @@ public class MyGenerator {
         billdetails.addDateProperty("generated_date");
         billdetails.addStringProperty("due_date");
         billdetails.addStringProperty("paid_by");
+        billdetails.addLongProperty("TimeStamp");
         return billdetails;
     }
 

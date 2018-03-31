@@ -18,6 +18,8 @@ import android.view.MenuItem;
 import android.widget.TextView;
 
 import com.example.popla.gorkhavidyutpowerpay.R;
+import com.example.popla.gorkhavidyutpowerpay.activity.new_connections.AddNewConnection;
+import com.example.popla.gorkhavidyutpowerpay.activity.new_connections.Add_New_Connection_Clicks;
 
 public class Homepage extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -121,11 +123,11 @@ public class Homepage extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.addconn) {
-            Intent i1=new Intent(this, AddNewConnection.class);
+            Intent i1=new Intent(this, Add_New_Connection_Clicks.class);
             startActivity(i1);
             // Handle the camera action
         } else if (id == R.id.paybill) {
-            Intent i2=new Intent(this, PutBillDetail.class);
+            Intent i2=new Intent(this, PayBill.class);
             startActivity(i2);
 
         } else if (id == R.id.complaints) {

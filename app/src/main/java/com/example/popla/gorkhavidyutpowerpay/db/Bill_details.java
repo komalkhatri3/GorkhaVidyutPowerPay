@@ -20,6 +20,7 @@ public class Bill_details {
     private java.util.Date generated_date;
     private String due_date;
     private String paid_by;
+    private Long TimeStamp;
 
     // KEEP FIELDS - put your custom fields here
     // KEEP FIELDS END
@@ -33,13 +34,14 @@ public class Bill_details {
     }
 
     @Generated
-    public Bill_details(Long Bill_id, String k_no, String current_read, java.util.Date generated_date, String due_date, String paid_by) {
+    public Bill_details(Long Bill_id, String k_no, String current_read, java.util.Date generated_date, String due_date, String paid_by, Long TimeStamp) {
         this.Bill_id = Bill_id;
         this.k_no = k_no;
         this.current_read = current_read;
         this.generated_date = generated_date;
         this.due_date = due_date;
         this.paid_by = paid_by;
+        this.TimeStamp = TimeStamp;
     }
 
     public Long getBill_id() {
@@ -88,6 +90,14 @@ public class Bill_details {
 
     public void setPaid_by(String paid_by) {
         this.paid_by = paid_by;
+    }
+
+    public Long getTimeStamp() {
+        return TimeStamp;
+    }
+
+    public void setTimeStamp(Long TimeStamp) {
+        this.TimeStamp = TimeStamp;
     }
 
     // KEEP METHODS - put your custom methods here
